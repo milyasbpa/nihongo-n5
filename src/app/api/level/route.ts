@@ -4,18 +4,12 @@ import Papa from "papaparse";
 import { NextResponse } from "next/server";
 import { createApiResponse } from "@/core/utils/api";
 
-type Person = {
-  id: string;
-  name: string;
-  age: string;
-};
-
 export async function GET() {
   try {
-    const filePath = path.join(process.cwd(), "src", "data", "n5", "angka.csv");
+    const filePath = path.join(process.cwd(), "src", "data", "level.csv");
     const fileContent = fs.readFileSync(filePath, "utf-8");
 
-    const parsed = Papa.parse<Person>(fileContent, {
+    const parsed = Papa.parse(fileContent, {
       header: true,
       skipEmptyLines: true,
     });
