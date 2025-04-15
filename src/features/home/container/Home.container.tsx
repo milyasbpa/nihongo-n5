@@ -3,11 +3,17 @@ import clsx from "clsx";
 import { LevelHome } from "../fragments/level";
 import Image from "next/image";
 import { getDictionaries } from "../i18n";
+import { VocabularyHome } from "../fragments/vocabulary";
 
 export const HomeContainer = () => {
   const dictionaries = getDictionaries();
   return (
-    <div className={clsx("w-full")}>
+    <div
+      className={clsx(
+        "grid grid-cols-1 place-content-start place-items-start gap-[1rem]",
+        "w-full"
+      )}
+    >
       <div>
         <Image
           {...dictionaries.flag}
@@ -19,6 +25,7 @@ export const HomeContainer = () => {
         />
       </div>
       <LevelHome />
+      <VocabularyHome />
     </div>
   );
 };
