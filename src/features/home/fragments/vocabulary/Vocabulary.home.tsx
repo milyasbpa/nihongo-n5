@@ -26,7 +26,7 @@ export const VocabularyHome = () => {
         )}
       >
         {state.vocabulary.category.items.map((category, categoryIndex) => (
-          <Card key={categoryIndex} className={clsx("w-[200px] h-[200px]")}>
+          <Card key={categoryIndex} className={clsx("w-[160px] h-[160px]")}>
             <p className={clsx("text-[black] text-[0.875rem]")}>
               {category.name}
             </p>
