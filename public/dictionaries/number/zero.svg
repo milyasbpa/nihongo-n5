@@ -1,0 +1,11 @@
+<svg viewBox="0 0 100 100" className="w-full h-full animate-draw" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50,10
+     C70,10 80,30 80,50
+     C80,70 70,90 50,90
+     C30,90 20,70 20,50
+     C20,30 30,10 50,10" stroke="#22c55e" strokeWidth="8" strokeLinecap="round" fill="none" strokeDasharray="251.2"
+        strokeDashoffset="251.2">
+        <animate attributeName="stroke-dashoffset" from="251.2" to="0" dur="1.2s" fill="freeze" begin="0s"
+            repeatCount="1" />
+    </path>
+</svg>
