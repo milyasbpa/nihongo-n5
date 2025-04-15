@@ -1,21 +1,21 @@
 import * as React from "react";
 import { useQuery } from "@tanstack/react-query";
-import { CategoryReactQueryKey } from "../keys";
+import { HomeReactQueryKey } from "../keys";
 import {
   GetLevelListErrorResponseInterface,
   GetLevelListSuccessResponseInterface,
 } from "@/core/models/rest/jlpt/level";
-import { CategoryActionEnum, CategoryContext } from "../../context";
+import { HomeActionEnum, HomeContext } from "../../context";
 import { fetchGetLevelList } from "@/core/services/rest/jlpt/level";
 
 export const useGetLevelList = () => {
-  const { state, dispatch } = React.useContext(CategoryContext);
+  const { state, dispatch } = React.useContext(HomeContext);
 
   const query = useQuery<
     GetLevelListSuccessResponseInterface,
     GetLevelListErrorResponseInterface
   >({
-    queryKey: CategoryReactQueryKey.GetLevelList(),
+    queryKey: HomeReactQueryKey.GetLevelList(),
     queryFn: () => {
       return fetchGetLevelList();
     },
@@ -25,7 +25,7 @@ export const useGetLevelList = () => {
     if (query.data && !query.isFetching) {
       const data = query.data;
       dispatch({
-        type: CategoryActionEnum.SetLevelData,
+        type: HomeActionEnum.SetLevelData,
         payload: {
           ...state.level,
           list: data.data.map((item) => {

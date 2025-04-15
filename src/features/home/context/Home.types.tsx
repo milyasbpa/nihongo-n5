@@ -10,31 +10,31 @@ type ActionMap<M extends { [index: string]: any }> = {
 };
 
 // State Collection Types
-export interface CategoryInitialStateType {
-  level: CategoryLevel;
+export interface HomeInitialStateType {
+  level: HomeLevel;
 }
 
 // State Collection Types consist of:
-export interface CategoryLevel {
+export interface HomeLevel {
   list: {
     id: string;
     name: string;
   }[];
 }
 
-export enum CategoryActionEnum {
+export enum HomeActionEnum {
   // Level
   SetLevelData = "SetLevelData",
 }
 
 // Action Collection Types
-export type CategoryActions = CategoryLevelActions;
+export type HomeActions = HomeLevelActions;
 
 // Action Collection Types consist of:
 // Level
-type CategoryLevelPayload = {
-  [CategoryActionEnum.SetLevelData]: CategoryLevel;
+type HomeLevelPayload = {
+  [HomeActionEnum.SetLevelData]: HomeLevel;
 };
 
-export type CategoryLevelActions =
-  ActionMap<CategoryLevelPayload>[keyof ActionMap<CategoryLevelPayload>];
+export type HomeLevelActions =
+  ActionMap<HomeLevelPayload>[keyof ActionMap<HomeLevelPayload>];
