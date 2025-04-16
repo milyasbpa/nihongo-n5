@@ -1,3 +1,5 @@
+import { GetQuestionListResponseDTO } from "@/api/vocabulary/dto/question_list.get";
+
 type ActionMap<M extends { [index: string]: any }> = {
   [Key in keyof M]: M[Key] extends undefined
     ? {
@@ -17,21 +19,13 @@ export interface VocabularyInitialStateType {
 // State Collection Types consist of:
 export interface VocabularyQuestion {
   selected: null | number;
-  data: {
-    id: string;
-    prompt: {
-      text: string;
-      voice_url: string;
-      image_url: string;
-    };
-    options: {
-      id: string;
-      text: string;
-      voice_url: string;
-    }[];
-    correct_text: string;
-  }[];
+  data: QuestionWithCorrect[];
 }
+
+export type QuestionWithCorrect = GetQuestionListResponseDTO & {
+  answers: string[];
+  correct: boolean;
+};
 
 export enum VocabularyActionEnum {
   // Question

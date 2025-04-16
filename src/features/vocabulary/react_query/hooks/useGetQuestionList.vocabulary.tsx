@@ -41,7 +41,14 @@ export const useGetQuestionList = () => {
         payload: {
           ...state.question,
           selected: !data.data?.length ? null : 0,
-          data: data.data ?? [],
+          data:
+            data.data?.map((item) => {
+              return {
+                ...item,
+                correct: false,
+                answers: [],
+              };
+            }) ?? [],
         },
       });
     }

@@ -21,7 +21,8 @@ export class VocabularyService {
       const allOptions = [...wrongOptions, current]
         .sort(() => Math.random() - 0.5)
         .map((opt, index) => ({
-          id: String.fromCharCode(97 + index), // 'a', 'b', 'c', ...
+          // id: String.fromCharCode(97 + index), // 'a', 'b', 'c', ...
+          id: opt["id"],
           text: opt["id-ID"],
           voice_url: opt["voice"],
         }));
@@ -31,11 +32,10 @@ export class VocabularyService {
         prompt: {
           // text: current["ja-JP"],
           text: "Which one is correct?",
-          voice_url: current.voice,
-          image_url: current.image,
+          ...current,
         },
         options: allOptions,
-        correct_text: current["id-ID"],
+        correct: current,
       };
 
       questions.push(question);
