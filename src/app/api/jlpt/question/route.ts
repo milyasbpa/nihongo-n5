@@ -3,15 +3,39 @@ import path from "path";
 import Papa from "papaparse";
 import { NextResponse, NextRequest } from "next/server";
 import { createApiResponse } from "@/core/utils/api";
+import { z } from "zod";
+
+// 1. Zod schema for validation
+const querySchema = z.object({
+  level: z.enum(["n5", "n4", "n3", "n2", "n1"]), // misalnya hanya JLPT levels
+  category: z.string().min(1, "Category is required"),
+});
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const level = searchParams.get("level");
-  const category = searchParams.get("category");
 
-  if (!level || !category) {
-    return NextResponse.json({ error: "Bad Request Error" }, { status: 400 });
+  // 2. Convert searchParams to plain object
+  const query = {
+    level: searchParams.get("level"),
+    category: searchParams.get("category"),
+  };
+
+  // 3. Validate with Zod
+  const result = querySchema.safeParse(query);
+
+  if (!result.success) {
+    return NextResponse.json(
+      createApiResponse(
+        false,
+        [],
+        "Validation failed",
+        result.error.flatten().fieldErrors
+      ),
+      { status: 400 }
+    );
   }
+
+  const { level, category } = result.data;
 
   try {
     const filePath = path.join(
@@ -40,7 +64,10 @@ export async function GET(request: NextRequest) {
         [],
         "Failed to fetch data",
         error instanceof Error ? error.message : "Unknown error"
-      )
+      ),
+      {
+        status: 500,
+      }
     );
   }
 }

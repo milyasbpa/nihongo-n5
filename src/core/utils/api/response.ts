@@ -2,14 +2,14 @@ export interface ApiResponse<T> {
   success: boolean;
   message?: string;
   data?: T;
-  error?: string;
+  error?: any;
 }
 
 export function createApiResponse<T>(
   success: boolean,
   data?: T,
   message?: string,
-  error?: string
+  error?: any
 ): ApiResponse<T> {
   return {
     success,
