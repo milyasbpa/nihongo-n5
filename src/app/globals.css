@@ -2,18 +2,32 @@
 
 :root {
   --foreground: #171717;
-  --background: #1E1E1E;
-  --surface: #2C2C2C;
-  --primary: #78C800;
-  --primaryHover: #A0E500;
-  --accentPurple: #A78BFA;
-  --accentBlue: #3ABEF9;
-  --textPrimary: #FFFFFF;
-  --textSecondary: #CFCFCF;
-  --border: #3D3D3D;
-  --success: #42C866;
-  --error: #FF5E5E;
-  --warning: #FFC107;
+  --background: #1e1e1e;
+  --surface: #2c2c2c;
+  --primary: #78c800;
+  --primaryHover: #a0e500;
+  --accentPurple: #a78bfa;
+  --accentBlue: #3abef9;
+  --textPrimary: #ffffff;
+  --textSecondary: #cfcfcf;
+  --border: #3d3d3d;
+  --success: #42c866;
+  --error: #ff5e5e;
+  --warning: #ffc107;
+}
+
+@keyframes duowave {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-duowave {
+  animation: duowave 1s ease-in-out infinite;
 }
 
 @theme inline {

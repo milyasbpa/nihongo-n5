@@ -8,4 +8,7 @@ export const JLPTAPICollectionURL = {
     getList: (params: GetCategoryListParamsRequestInterface) =>
       `/api/jlpt/category/${params.level}`,
   },
+  vocabulary: {
+    getQuestionList: () => `/api/jlpt/vocabulary/question/list`,
+  },
 };

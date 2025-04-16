@@ -33,6 +33,7 @@ import {
   AlertCircle,
   CheckCircle2,
   AlertTriangle,
+  Play,
 } from "lucide-react";
 
 export const svgMap = {
@@ -70,6 +71,7 @@ export const svgMap = {
   AlertCircle,
   CheckCircle2,
   AlertTriangle,
+  Play,
 };
 
 export type SVGName = keyof typeof svgMap;
