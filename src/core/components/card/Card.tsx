@@ -13,9 +13,10 @@ export const Card = forwardRef<
         "relative",
         "cursor-default",
         "rounded-[0.75rem]",
-        "border border-[#DDDDDD]",
+        "border border-pastel-card-border",
         "px-[1.5rem] py-[1.5rem]",
-        "bg-[white]",
+        // "bg-pastel-card-backgound",
+        "bg-[#E0F7FA]",
         "shadow-[0px 6px 16px 0px #0000001F]",
         props.className
       )}

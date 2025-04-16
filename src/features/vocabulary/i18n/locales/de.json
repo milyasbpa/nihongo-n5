@@ -12,6 +12,11 @@
       "height": 1024,
       "alt": "flag"
     },
-    "message": "you finished"
+    "message": "you finished",
+    "cta": {
+      "back": {
+        "children": "Back"
+      }
+    }
   }
 }

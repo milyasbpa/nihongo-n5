@@ -1,19 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --foreground: #171717;
-  --background: #1e1e1e;
-  --surface: #2c2c2c;
-  --primary: #78c800;
-  --primaryHover: #a0e500;
-  --accentPurple: #a78bfa;
-  --accentBlue: #3abef9;
-  --textPrimary: #ffffff;
-  --textSecondary: #cfcfcf;
-  --border: #3d3d3d;
-  --success: #42c866;
-  --error: #ff5e5e;
-  --warning: #ffc107;
+  --pastel-background: #fffdfb;
+  --pastel-surface: #fff8f3;
+  --pastel-card-background: #fff7f2;
+  --pastel-card-border: #fbc6b4;
+  --pastel-card-primary-text: #4c2e25;
+  --pastel-card-secondary-text: #2f3e56;
 }
 
 @keyframes duowave {
@@ -31,20 +24,23 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-pastel-background: var(--pastel-background);
+  --color-pastel-surface: var(--pastel-surface);
+  --color-pastel-card-backgound: var(--pastel-card-background);
+  --color-pastel-card-border: var(--pastel-card-border);
+  --color-pastel-card-primary-text: var(--pastel-card-primary-text);
+  --color-pastel-card-secondary-text: var(--pastel-card-secondary-text);
   --font-fredoka: var(--font-fredoka);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  background: #ffffff;
-  color: var(--foreground);
+  background: var(--pastel-background);
   font-family: "Fredoka", sans-serif;
 }

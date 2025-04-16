@@ -17,9 +17,9 @@ export const VocabularyContainer = () => {
           "w-full"
         )}
       >
-        <ProgressVocabulary />
         {state.question.selected !== state.question.data.length ? (
           <>
+            <ProgressVocabulary />
             <QuestionVocabulary />
             <AnswerVocabulary />
           </>

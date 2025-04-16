@@ -1,0 +1,70 @@
+{
+  "extend": {
+    "colors": {
+      "pastel": {
+        "background": "#FDF6F0",
+        "surface": "#FFF8F3",
+        "primary": "#F7B7A3",
+        "primaryHover": "#f49f8a",
+        "secondary": "#C9D6FF",
+        "secondaryHover": "#b5c4f4",
+        "ghost": "#FFFFFF",
+        "border": "#EADFE7",
+        "icon": "#B088A3",
+        "progressBg": "#E5D3DC",
+        "progressFill": "#F7B7A3",
+        "text": {
+          "h1": "#443742",
+          "h2": "#574753",
+          "h3": "#6F5B66",
+          "h4": "#87717F",
+          "h5": "#9F8896",
+          "h6": "#B7A0AD",
+          "p": "#6F5B66",
+          "span": "#87717F"
+        },
+        "card": {
+          "primary": {
+            "background": "#FFF0EC",
+            "border": "#F7B7A3"
+          },
+          "secondary": {
+            "background": "#EEF1FF",
+            "border": "#C9D6FF"
+          }
+        }
+      },
+      "darkpastel": {
+        "background": "#2B2A33",
+        "surface": "#3A3A45",
+        "primary": "#F7B7A3",
+        "secondary": "#A6B5FF",
+        "ghost": "#3A3A45",
+        "border": "#4D4C59",
+        "icon": "#D3A5BD",
+        "progressBg": "#4B3F4A",
+        "progressFill": "#F7B7A3",
+        "text": {
+          "h1": "#FFF0EC",
+          "h2": "#F8EAE6",
+          "h3": "#E5D8D2",
+          "h4": "#D9C5C2",
+          "h5": "#C6B3B0",
+          "h6": "#B3A1A0",
+          "p": "#E2D1CE",
+          "span": "#CBBAB9"
+        },
+        "card": {
+          "primary": {
+            "background": "#3A2F34",
+            "border": "#F7B7A3"
+          },
+          "secondary": {
+            "background": "#323444",
+            "border": "#A6B5FF"
+          }
+        }
+      }
+    }
+  }
+}
