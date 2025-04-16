@@ -3,6 +3,8 @@ import * as React from "react";
 import clsx from "clsx";
 import SVGIcon from "@/core/icons";
 import { VocabularyContext } from "../../context";
+import Link from "next/link";
+import { AppCollectionURL } from "@/core/utils/router/constants/app";
 
 export const ProgressVocabulary = () => {
   const { state } = React.useContext(VocabularyContext);
@@ -13,12 +15,12 @@ export const ProgressVocabulary = () => {
         "w-full"
       )}
     >
-      <button>
+      <Link href={AppCollectionURL.public.home()}>
         <SVGIcon
           name="X"
           className={clsx("w-[1.5rem] h-[1.5rem]", "text-[black]")}
         />
-      </button>
+      </Link>
 
       <div
         className={clsx(

@@ -5,6 +5,7 @@ import { ProgressVocabulary } from "../fragments/progress";
 import { QuestionVocabulary } from "../fragments/question";
 import { AnswerVocabulary } from "../fragments/answer";
 import { VocabularyContext } from "../context";
+import { FinishVocabulary } from "../fragments/finish";
 
 export const VocabularyContainer = () => {
   const { state } = React.useContext(VocabularyContext);
@@ -17,11 +18,13 @@ export const VocabularyContainer = () => {
         )}
       >
         <ProgressVocabulary />
-        {state.question.selected !== state.question.data.length && (
+        {state.question.selected !== state.question.data.length ? (
           <>
             <QuestionVocabulary />
             <AnswerVocabulary />
           </>
+        ) : (
+          <FinishVocabulary />
         )}
       </div>
     </React.Suspense>
