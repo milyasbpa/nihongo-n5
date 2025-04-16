@@ -1,10 +1,13 @@
+"use client";
 import * as React from "react";
 import clsx from "clsx";
 import { ProgressVocabulary } from "../fragments/progress";
 import { QuestionVocabulary } from "../fragments/question";
 import { AnswerVocabulary } from "../fragments/answer";
+import { VocabularyContext } from "../context";
 
 export const VocabularyContainer = () => {
+  const { state } = React.useContext(VocabularyContext);
   return (
     <React.Suspense>
       <div
@@ -14,8 +17,12 @@ export const VocabularyContainer = () => {
         )}
       >
         <ProgressVocabulary />
-        <QuestionVocabulary />
-        <AnswerVocabulary />
+        {state.question.selected !== state.question.data.length && (
+          <>
+            <QuestionVocabulary />
+            <AnswerVocabulary />
+          </>
+        )}
       </div>
     </React.Suspense>
   );
