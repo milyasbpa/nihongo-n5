@@ -20,7 +20,7 @@ export class VocabularyService {
 
       const allOptions = [...wrongOptions, current]
         .sort(() => Math.random() - 0.5)
-        .map((opt, index) => ({
+        .map((opt) => ({
           // id: String.fromCharCode(97 + index), // 'a', 'b', 'c', ...
           id: opt["id"],
           text: opt["id-ID"],
