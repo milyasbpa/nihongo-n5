@@ -1,11 +1,15 @@
 import fs from "fs";
 import path from "path";
 import Papa from "papaparse";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import { createApiResponse } from "@/core/utils/api";
 
-export async function GET(_: Request, context: { params: { level: string } }) {
-  const { level } = await context?.params;
+export async function GET(
+  _: NextRequest,
+  { params }: { params: Promise<{ level: string }> }
+) {
+  const { level } = await params;
+
   try {
     const filePath = path.join(
       process.cwd(),
