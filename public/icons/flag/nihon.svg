@@ -1,0 +1,7 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <!-- Lingkaran putih sebagai latar -->
+    <circle cx="512" cy="512" r="512" fill="#ffffff" />
+
+    <!-- Lingkaran merah di tengah -->
+    <circle cx="512" cy="512" r="307.2" fill="#bc002d" />
+</svg>
