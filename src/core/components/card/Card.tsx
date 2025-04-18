@@ -16,7 +16,7 @@ export const Card = forwardRef<
         "border border-pastel-card-border",
         "px-[1.5rem] py-[1.5rem]",
         // "bg-pastel-card-backgound",
-        "bg-[#E0F7FA]",
+        "bg-[#E0F8E7]",
         "shadow-[0px 6px 16px 0px #0000001F]",
         props.className
       )}

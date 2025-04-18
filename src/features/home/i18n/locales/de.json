@@ -1,8 +1,52 @@
 {
-  "flag": {
-    "src": "/images/flag.svg",
-    "width": 32,
-    "height": 32,
-    "alt": "flag"
+  "vocabulary": {
+    "title": "Vocabulary"
+  },
+  "grammar": {
+    "title": "Grammar"
+  },
+  "level": {
+    "items": [
+      {
+        "id": "1",
+        "image_url": "/images/level/n5.png",
+        "title": "JLPT N5",
+        "background": "bg-green-100",
+        "color": "text-green-800",
+        "borderColor": "border-green-300"
+      },
+      {
+        "id": "2",
+        "image_url": "/images/level/n4.png",
+        "title": "JLPT N4",
+        "background": "bg-yellow-100",
+        "color": "text-yellow-800",
+        "borderColor": "border-yellow-300"
+      },
+      {
+        "id": "2",
+        "image_url": "/images/level/n3.png",
+        "title": "JLPT N3",
+        "background": "bg-orange-100",
+        "color": "text-orange-800",
+        "borderColor": "border-orange-300"
+      },
+      {
+        "id": "2",
+        "image_url": "/images/level/n2.png",
+        "title": "JLPT N2",
+        "background": "bg-blue-100",
+        "color": "text-blue-800",
+        "borderColor": "border-blue-300"
+      },
+      {
+        "id": "2",
+        "image_url": "/images/level/n1.png",
+        "title": "JLPT N1",
+        "background": "bg-red-100",
+        "color": "text-red-800",
+        "borderColor": "border-red-300"
+      }
+    ]
   }
 }

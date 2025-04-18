@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fredoka } from "next/font/google";
 import "./globals.css";
 import { ReactQueryProvider } from "@/core/utils/react_query";
@@ -8,9 +8,19 @@ const fredoka = Fredoka({
   subsets: ["latin"],
 });
 
+const defaultUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "http://localhost:2026";
+
 export const metadata: Metadata = {
-  title: "Bas Nihongo",
+  metadataBase: new URL(defaultUrl),
+  title: "JLPT",
   description: "Generated for Bas Learn Japanese",
+};
+
+export const viewport: Viewport = {
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({

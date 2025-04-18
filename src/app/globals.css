@@ -41,6 +41,7 @@
 } */
 
 body {
-  background: var(--pastel-background);
+  /* background: var(--pastel-background); */
+  background: linear-gradient(to bottom right, #f3fbf5, #fff8ed);
   font-family: "Fredoka", sans-serif;
 }
