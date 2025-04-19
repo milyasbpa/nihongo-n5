@@ -5,9 +5,16 @@ import SVGIcon from "@/core/icons";
 import { VocabularyContext } from "../../context";
 import Link from "next/link";
 import { AppCollectionURL } from "@/core/utils/router/constants/app";
+import { useSearchParams } from "next/navigation";
 
 export const ProgressVocabulary = () => {
   const { state } = React.useContext(VocabularyContext);
+  const searchParams = useSearchParams();
+  const level = searchParams.get("level");
+
+  const params = new URLSearchParams({
+    level: level?.toString() ?? "",
+  });
   return (
     <div
       className={clsx(
@@ -15,7 +22,7 @@ export const ProgressVocabulary = () => {
         "w-full"
       )}
     >
-      <Link href={AppCollectionURL.public.home()}>
+      <Link href={AppCollectionURL.public.chapter(params.toString())}>
         <SVGIcon
           name="X"
           className={clsx("w-[1.5rem] h-[1.5rem]", "text-[black]")}

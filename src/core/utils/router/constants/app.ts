@@ -1,5 +1,6 @@
 export const AppCollectionURL = {
   public: {
-    home: () => "/",
+    level: () => "/",
+    chapter: (params: string) => `/chapter?${params}`,
   },
 };
