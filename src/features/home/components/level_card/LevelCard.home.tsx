@@ -32,7 +32,7 @@ export const LevelCardHome = ({
       <img
         src={image_url}
         alt="JLPT N5 Ilustrasi"
-        className="aspect-square h-full object-cover"
+        className="aspect-square h-[140px] object-cover"
       />
       <div className="p-4">
         <h2 className={clsx("text-xl font-bold mb-2", color)}>{title}</h2>
