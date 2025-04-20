@@ -12,7 +12,7 @@ export interface GetVocabularyQuestionListPayloadRequestInterface {
 }
 
 export type GetVocabularyQuestionListQueryPayloadRequestInterface = {
-  category: string;
+  category_id: string;
   level: string;
 };
 

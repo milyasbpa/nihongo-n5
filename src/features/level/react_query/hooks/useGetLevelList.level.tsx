@@ -22,18 +22,19 @@ export const useGetLevelList = () => {
   });
 
   React.useEffect(() => {
-    if (query.data && !query.isFetching) {
+    if (!!query.data && !query.isFetching) {
       const data = query.data;
       dispatch({
         type: LevelActionEnum.SetListData,
         payload: {
           ...state.list,
-          data: data.data.map((item) => {
-            return {
-              id: item.id,
-              name: item.name,
-            };
-          }),
+          data:
+            data.data?.map((item) => {
+              return {
+                id: item.id,
+                name: item.name,
+              };
+            }) ?? [],
         },
       });
     }

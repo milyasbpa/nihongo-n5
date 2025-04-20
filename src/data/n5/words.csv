@@ -1,0 +1,675 @@
+id,category_id,voice_url,image_url,romanji,hiragana_katakana,ja-JP,id-ID
+1,1,/n5/voices/numbers/1,/n5/angka/1,ban'gou,ばんごう,番号,nomor
+2,1,/n5/voices/numbers/2,/n5/angka/2,rei,れい, 例,nol
+3,1,/n5/voices/numbers/3,/n5/angka/3,zero,ゼロ,ゼロ,nol
+4,1,/n5/voices/numbers/4,/n5/angka/4,han,はん,半,setengah
+5,1,/n5/voices/numbers/5,/n5/angka/5,ichi,いち,一,satu
+6,1,/n5/voices/numbers/6,/n5/angka/6,ni,に,二,dua
+7,1,/n5/voices/numbers/7,/n5/angka/7,san,さん,三,tiga
+8,1,/n5/voices/numbers/8,/n5/angka/8,yon,よん,四,empat
+9,1,/n5/voices/numbers/9,/n5/angka/9,go,ご,五,lima
+10,1,/n5/voices/numbers/10,/n5/angka/10,roku,ろく,六,enam
+11,1,/n5/voices/numbers/11,/n5/angka/11,nana,なな,七,tujuh
+12,1,/n5/voices/numbers/12,/n5/angka/12,hachi,はち,八,delapan
+13,1,/n5/voices/numbers/13,/n5/angka/13,"kyuu,ku",きゅう / く,九,sembilan
+14,1,/n5/voices/numbers/14,/n5/angka/14,jyuu,じゅう,十,sepuluh
+15,1,,,hyaku,ひゃく,百,seratus
+16,1,,,sen,せん	,千,seribu
+17,1,,,man,まん,万,sepuluh ribu
+18,2,,,hitotsu,ひとつ,一つ,1 tahun
+19,2,,,futatsu,ふたつ,二つ,2 tahun
+20,2,,,mittsu,みっつ,三つ,3 tahun
+21,2,,,yottsu,よっつ,四つ,4 tahun
+22,2,,,itsutsu,いつつ,五つ,5 tahun
+23,2,,,muttsu,むっつ,六つ,6 tahun
+24,2,,,nanatsu,ななつ,七つ,7 tahun
+25,2,,,yattsu,やっつ,八つ,8 tahun
+26,2,,,kokonotsu,ここのつ,九つ,9 tahun
+27,2,,,too,とお,十,10 tahun
+28,2,,,hatachi,はたち,二十歳,20 tahun
+29,3,,,youbi,ようび,曜日,hari
+30,3,,,getsuyoubi,げつようび,月曜日,senin
+31,3,,,kayoubi,かようび,火曜日,selasa
+32,3,,,suiyoubi,すいようび,水曜日,rabu
+33,3,,,mokuyoubi,もくようび,木曜日,kamis
+34,3,,,kin'youbi,きんようび,金曜日,jumat
+35,3,,,doyoubi,どようび,土曜日,sabtu
+36,3,,,nichiyoubi,にちようび,日曜日,minggu
+37,4,,,nichi,にち,日,"tanggal,hari"
+38,4,,,tsuitachi,ついたち,一日,tanggal 1
+39,4,,,futsuka,ふつか,二日,tanggal 2
+40,4,,,mikka,	みっか,三日,tanggal 3
+41,4,,,yokka,よっか,四日,tanggal 4
+42,4,,,itsuka,いつか,五日,tanggal 5
+43,4,,,muika,むいか,六日,tanggal 6
+44,4,,,nanoka,なのか,七日,tanggal 7
+45,4,,,youka,ようか,八日,tanggal 8
+46,4,,,kokonoka,ここのか,九日,tanggal 9
+47,4,,,tooka,とおか,十日,tanggal 10
+48,4,,,hatsuka,	はつか,二十日,tanggal 20
+49,5,,,ichinichi,いちにち,一日,1 hari
+50,5,,,futsuka (kan),ふつかかん,二日間,(selama) 2 hari
+51,5,,,mikka (kan),みっかかん,三日間,(selama) 3 hari
+52,5,,,yokka (kan),よっかかん,四日間,(selama) 4 hari
+53,5,,,itsuka (kan),いつかかん,五日間,(selama) 5 hari
+54,5,,,muika (kan),むいかかん,六日間,(selama) 6 hari
+55,5,,,nanoka (kan),なのかかん,七日間,(selama) 7 hari
+56,5,,,youka (kan),ようかかん,八日間,(selama) 8 hari
+57,5,,,kokonoka (kan),ここのかかん,九日間,(selama) 9 hari
+58,5,,,tooka (kan),とおかかん,十日間,(selama) 10 hari
+59,5,,,isshuukan,いっしゅうかん,一週間,(selama) 1 minggu
+60,5,,,ikkagetsu (kan),いっかげつかん,一か月間,(selama) 1 bulan
+61,5,,,ichinen (kan),いちねんかん,一年間,(selama) 1 tahun
+62,6,,,jikan,じかん,時間,waktu
+63,6,,,gozen,ごぜん,午前,"pagi, a.m."
+64,6,,,gogo,ごご,午後,sore p.m
+65,6,,,saki,さき,先,lebih dulu
+66,6,,,ima,いま,今,sekarang
+67,6,,,asa,あさ,朝,pagi
+68,6,,,hiru,ひる,昼,siang
+69,6,,,yuugata,ゆうがた,夕方,sore
+70,6,,,"yoru, ban",よる / ばん,"夜, 晩",malam
+71,6,,,mainichi,まいにち,毎日,setiap hari
+72,6,,,maiasa,まいあさ,毎朝,setiap pagi
+73,6,,,maiban,まいばん,毎晩,setiap malam
+74,6,,,maishuu,まいしゅう,毎週,setiap minggu
+75,6,,,maitsuki/maigetsu,まいつき / まいげつ,毎月,setiap bulan
+76,6,,,maitoshi/mainen,まいとし / まいねん,毎年,setiap tahun
+77,6,,,kesa,けさ,今朝,"tadi pagi, pagi ini"
+78,6,,,konban,こんばん,今晩,malam ini
+79,6,,,konshuu,こんしゅ,今週,minggu ini
+80,6,,,kon'getsu,こんげつ,今月,bulan ini
+81,6,,,kotoshi,ことし,今年,tahun ini
+82,6,,,ototoi,おととい,一昨日,kemarin dulu
+83,6,,,"yuube, sakuya","ゆうべ, さくや","夕べ, 昨夜","tadi malam, kemarin malam"
+84,6,,,kinou,きのう,昨日,kemarin
+85,6,,,kyou,きょう,今日,hari ini
+86,6,,,ashita,あした,明日,besok
+87,6,,,asatte,あさって,明後日,lusa
+88,6,,,sensenshuu,せんせんしゅう,先々週,2 minggu yang lalu
+89,6,,,senshuu,せんしゅう,先週,minggu lalu
+90,6,,,konshuu,こんしゅう,今週,minggu ini
+91,6,,,raishuu,らいしゅう,来週,minggu depan
+92,6,,,saraishuu,さらいしゅう,再来週,2 minggu yang akan datang
+93,6,,,sensen'getsu,せんせんげつ,先々月,2 bulan yang lalu
+94,6,,,sen'getsu,せんげつ,先月,bulan lalu
+95,6,,,kon'getsu,こんげつ,今月,bulan ini
+96,6,,,raigetsu,らいげつ,来月,bulan depan
+97,6,,,saraigetsu,さらいげつ,再来月,2 bulan yang akan datang
+98,6,,,ototoshi,おととし,一昨年,2 tahun yang lalu
+99,6,,,kyonen,きょねん,去年,tahun lalu
+100,6,,,kotoshi,ことし,今年,tahun ini
+101,6,,,rainen,らいねん,来年,tahun depan
+102,6,,,sarainen,さらいねん,再来年,2 tahun yang akan datang
+103,7,,,iro,いろ,色,warna
+104,7,,,"ao, aoi","あお, あおい",青 / 青い,biru
+105,7,,,"aka, akai","あか, あかい",赤 / 赤い,merah
+106,7,,,"kiiro, kiiroi","きいろ, きいろい",黄色 / 黄色い,kuning
+107,7,,,"kuro, kuroi","くろ, くろい",黒 / 黒い,hitam
+108,7,,,"shiro, shiroi","しろ, しろい",白 / 白い,putih
+109,7,,,"cha'iro, chairoi","ちゃいろ, ちゃいろい",茶色 / 茶色い,coklat
+110,7,,,"midori iro, midori","みどりいろ, みどり",	緑 / 緑色,hijau
+111,8,,,"kiro, kiroguramu",キロ、キログラム,キログラム,"kilo, kilogram (kg)"
+112,8,,,guramu,グラム,グラム,gram (gr)
+113,8,,,"kiro, kiromētoru",キロ、キロメートル,キロメートル,"kilo, kilometer (km)"
+114,8,,,mētoru,メートル,メートル,meter (m)
+115,8,,,mai,まい,枚,lembar
+116,8,,,pēji,ページ,ページ,halaman
+117,8,,,satsu,さつ,冊,jilid
+118,8,,,jikan,じかん,時間,jam
+119,8,,,"fun, pun",ふん、ぷん,分,menit
+120,8,,,byou,びょう,秒,detik
+121,8,,,ban,ばん,番,nomor
+122,8,,,banme,ばんめ,番目,(nomor urut) ke ...
+123,8,,,nin,にん,人,orang
+124,8,,,"hon, pon, bon",ほん、ぽん、ぼん,本,"batang (pensil, botol, payung, pohon)"
+125,8,,,"hiki, piki, biki",ひき、ぴき、びき,匹,ekor
+126,9,,,"watashi, watakushi",わたし、わたくし,私、私,saya
+127,9,,,anata,あなた,あなた,"kamu, anda"
+128,9,,,kare,かれ,彼,dia (laki-laki)
+129,9,,,kanojyo,かのじょ,彼女,dia (perempuan)
+130,9,,,watasi/watakhushi tachi,わたしたち / わたくしたち,私たち / 私達,"kami, kita"
+131,9,,,anata tachi,あなたたち,あなたたち,"kalian, anda sekalian"
+132,9,,,"kare tachi, karera",かれたち、かれら,彼たち、彼ら,mereka (laki-laki)
+133,9,,,"kanojyo tachi, kanojyora",かのじょたち、かのじょら,彼女たち、彼女ら,mereka (perempuan)
+134,9,,,jibun,じぶん,自分,diri sendiri
+135,10,,,hito,ひと,人,orang
+136,10,,,kata,かた,方,orang (bentuk hormat)
+137,10,,,otona,おとな,大人,(orang) dewasa
+138,10,,,otoko,おとこ,男,"laki-laki, pria"
+139,10,,,onna,おんな,女,"perempuan, wanita"
+140,10,,,"kodomo, ko",こども、こ,子供、子,anak-anak
+141,10,,,atama,あたま,頭,kepala
+142,10,,,me,め,目,mata
+143,10,,,hana,はな,鼻,hidung
+144,10,,,kuchi,くち,口,mulut
+145,10,,,hana,は,歯,gigi
+146,10,,,mimi,みみ,耳,telinga
+147,10,,,kubi,くび,首,leher
+148,10,,,karada,からだ,体,"tubuh, badan"
+149,10,,,te,て,手,tangan
+150,10,,,mune,むね,胸,dada
+151,10,,,"se, sei",せ、せい,背、背,punggung
+152,10,,,onaka,おなか,お腹,perut
+153,10,,,ashi,あし,足,kaki
+154,11,,,kazoku,かぞく,家族,keluarga
+155,11,,,katei,かてい,家庭,rumah tangga
+156,11,,,ojiisan,おじいさん,お祖父さん,kakek
+157,11,,,obaasan,おばあさん,お祖母さん,nenek
+158,11,,,"otousan, chichi",おとうさん、ちち,お父さん、父,"ayah, bapak"
+159,11,,,"okaasan, haha",おかあさん、はは,お母さん、母,"ibu, bunda"
+160,11,,,ryoushin,りょうしん,両親,"ibu dan ayah, orang tua"
+161,11,,,ojisan,おじさん,伯父／叔父,"paman, om"
+162,11,,,obasan,おばさん,伯母／叔母,"bibi, tante"
+163,11,,,kyoudai,きょうだい,兄弟,"abang adik, saudara"
+164,11,,,"oniisan, ani",おにいさん、あに,お兄さん、兄,kakak laki-laki
+165,11,,,"oneesan, ane",おねえさん、あね	,お姉さん、姉,kakak perempuan
+166,11,,,"otoutosan, otouto",おとうとさん、おとうと	,弟さん、弟,adik laki-laki
+167,11,,,"imoutosan, imouto",いもうとさん、いもうと,妹さん、妹,adik perempuan
+168,12,,,tenki,てんき,天気,"cuaca, udara"
+169,12,,,sora,そら,空,langit
+170,12,,,kumori,くもり,曇り,"berawan, mendung"
+171,12,,,hare,はれ,晴れ,udara cerah
+172,12,,,kaze,かぜ,風,angin
+173,12,,,ame,あめ,雨,hujan
+174,12,,,yuki,ゆき,雪,salju
+175,12,,,mizu,みず,水,air
+176,12,,,umi,うみ,海,laut
+177,12,,,kawa,かわ,川,sungai
+178,12,,,ike,いけ,池,kolam
+179,12,,,yama,やま,山,gunung
+180,12,,,ki,き,木,"pohon, kayu"
+181,12,,,hana,はな,花,bunga
+182,13,,,haru,はる,春,musim semi
+183,13,,,natsu,なつ,夏,musim panas
+184,13,,,aki,あき,秋,musim gugur
+185,13,,,fuyu,ふゆ,冬,musim dingin
+186,14,,,doubutsu,どうぶつ,動物,binatang
+187,14,,,petto,ペット,ペット,binatang peliharaan
+188,14,,,inu,いぬ,犬,anjing
+189,14,,,neko,ねこ,猫,kucing
+190,14,,,tori,とり,鳥,burung
+191,14,,,niwatori,にわとり,鶏／鶏肉,ayam
+192,14,,,sakana,さかな,魚,ikan
+193,14,,,ebi,えび,海老,udang
+194,15,,,mono,もの,物,barang
+195,15,,,boushi,ぼうし,帽子,topi
+196,15,,,kasa,かさ,傘,payung
+197,15,,,megane,めがね,眼鏡,kacamata
+198,15,,,hankachi,ハンカチ,ハンカチ,sapu-tangan
+199,15,,,taoru,タオル,タオル,handuk
+200,15,,,sekken,せっけん,石鹸,sabun
+201,15,,,shanpū,シャンプー,シャンプー,shampo
+202,15,,,saifu,さいふ,財布,dompet
+203,15,,,okane,おかね,お金,uang
+204,15,,,surippa,スリッパ,スリッパ,sandal
+205,15,,,kutsushita,くつした,靴下,kaos kaki
+206,15,,,kutsu,くつ,靴,sepatu
+207,15,,,nimotsu,にもつ,荷物,barang bawaan
+208,15,,,kaban,かばん,鞄,tas
+209,15,,,tabako,たばこ,煙草／たばこ,rokok
+210,15,,,macchi,マッチ,マッチ,korek api
+211,15,,,kusuri,くすり,薬,obat
+212,15,,,kagi,かぎ,鍵,kunci
+213,15,,,shinbun,しんぶん,新聞,koran
+214,15,,,zasshi,ざっし,雑誌,majalah
+215,16,,,"youfuku, fuku",ようふく / ふく,洋服 / 服,pakaian
+216,16,,,kōto,コート,コート,mantel (coat)
+217,16,,,sētā,セーター,セーター,"baju hangat, sweater"
+218,16,,,sebiro,せびろ,背広,jas
+219,16,,,uwagi,うわぎ,上着,"jaket, baju atas"
+220,16,,,"waishatsu, shatsu",ワイシャツ / シャツ,ワイシャツ / シャツ,kemeja
+221,16,,,nekutai,ネクタイ,ネクタイ,dasi
+222,16,,,sukāto,スカート,スカート,rok
+223,16,,,zubon,ズボン,ズボン,celana panjang
+224,16,,,poketto,ポケット,ポケット,saku
+225,16,,,botan,ボタン,ボタン,kancing baju
+226,17,,,tabemono,たべもの,食べ物,makanan
+227,17,,,nomimono,のみもの,飲み物,minuman
+228,17,,,gohan,ごはん,ご飯,nasi
+229,17,,,asagohan,あさごはん,朝ご飯,makan pagi
+230,17,,,hirugohan,ひるごはん,昼ご飯,makan siang
+231,17,,,"ban'gohan, yuuhan",ばんごはん / ゆうはん,晩ご飯 / 夕飯,makan malam
+232,17,,,obentou,おべんとう,お弁当,makanan bekal
+233,17,,,ryouri,りょうり,料理,masakan
+234,17,,,niku,にく,肉,daging
+235,17,,,gyuuniku,ぎゅうにく,牛肉,daging sapi
+236,17,,,butaniku,ぶたにく,豚肉,daging babi
+237,17,,,"toriniku, chikin",とりにく / チキン,鶏肉 / チキン,daging ayam
+238,17,,,yasai,やさい,野菜,sayur
+239,17,,,sarada,サラダ,サラダ,salad
+240,17,,,tomato,トマト,トマト,tomat
+241,17,,,kudamono,くだもの,果物,buah-buahan
+242,17,,,rin'go,りんご,林檎,apel
+243,17,,,mikan,みかん,蜜柑,jeruk
+244,17,,,banana,バナナ,バナナ,pisang
+245,17,,,pan,パン,パン,roti
+246,17,,,batā,バター,バター,mentega
+247,17,,,tamago,たまご,卵,telur
+248,17,,,"gyuunyuu, miruku",ぎゅうにゅう / ミルク,牛乳 / ミルク,susu
+249,17,,,ocha,おちゃ,お茶,teh hijau
+250,17,,,koucha,こうちゃ,紅茶,teh hijau
+251,17,,,kōhī,コーヒー,コーヒー,kopi
+252,17,,,okashi,おかし,お菓子,"kue, makanan ringan"
+253,17,,,ame,あめ,飴,permen
+254,17,,,osake,おさけ,お酒,sake
+255,18,,,on'gaku,おんがく,音楽,musik
+256,18,,,uta,うた,歌,lagu
+257,18,,,gitā,ギター,ギター,gitar
+258,18,,,rekōdo,レコード,レコード,piringan hitam
+259,18,,,eiga,えいが,映画,film
+260,18,,,ryokou,りょこう,旅行,darmawisata
+261,18,,,shashin,しゃしん,写真,foto
+262,18,,,kamera,カメラ,カメラ,kamera
+263,18,,,supōtsu,スポーツ,スポーツ,olahraga
+264,18,,,pāt(e)i,パーティー,パーティー,pesta
+265,19,,,mura,むら,村,"dusun, desa"
+266,19,,,machi,まち,町,kota
+267,19,,,michi,みち,道,jalan
+268,19,,,kado,かど,角,"sudut, tikungan, belokan"
+269,19,,,kousaten,こうさてん,交差点,persimpangan jalan
+270,19,,,hashi,はし,橋,jembatan
+271,19,,,kouen,こうえん,公園,taman
+272,19,,,pūru,プール,プール,kolam renang
+273,19,,,tenisu kōto,テニスコート,テニスコート,lapangan tenis
+274,19,,,chizu,ちず,地図,peta
+275,20,,,kuruma,くるま,車,"mobil, kendaraan"
+276,20,,,jidousha,じどうしゃ,自動車,mobil
+277,20,,,jitensha,じてんしゃ,自転車,sepeda
+278,20,,,"baiku, ōto baiku",バイク / オートバイク,バイク / オートバイク,motor
+279,20,,,takushi,タクシー,タクシー,taksi
+280,20,,,basu,バス,バス,bis
+281,20,,,densha,でんしゃ,電車,kereta listrik
+282,20,,,chikatetsu,ちかてつ,地下鉄,kereta bawah tanah
+283,20,,,hikouki,ひこうき,飛行機,pesawat terbang
+284,20,,,kippu,きっぷ,切符,"karcis, tiket"
+285,21,,,gakkou,がっこう,学校,sekolah
+286,21,,,daigaku,だいがく,大学,"universitas, perguruan tinggi"
+287,21,,,kyoushitsu,kurasu,きょうしつ / クラス,教室 / クラス
+288,21,,,toshokan,としょかん,図書館,perpustakaan
+289,21,,,jyugyou,じゅぎょう,授業,"pelajaran, perkuliahan"
+290,21,,,kotoba,ことば,言葉,"kata-kata, bahasa"
+291,21,,,eigo,えいご,英語,bahasa inggris
+292,21,,,kanji,かんじ,漢字,(huruf) kanji
+293,21,,,bunshou,ぶんしょう,文章,kalimat
+294,21,,,sakubun,さくぶん,作文,karangan
+295,21,,,jisho,jibiki,じしょ / じびき,辞書 / 字引
+296,21,,,imi,いみ,意味,arti
+297,21,,,shukudai,しゅくだい,宿題,"pekerjaan rumah, PR"
+298,21,,,tesuto,shiken,テスト / しけん,テスト / 試験
+299,22,,,tatemono,たてもの,建物,bangunan
+300,22,,,apāto,アパート,アパート,apartemen
+301,22,,,ie,いえ,家,rumah
+302,22,,,hoteru,ホテル,ホテル,hotel
+303,22,,,depāto,デパート,デパート,toko serba-ada
+304,22,,,eki,えき,駅,stasiun
+305,22,,,byouin,びょういん,病院,rumah sakit
+306,22,,,eigakan,えいがかん,映画館,bioskop
+307,22,,,ginkou,ぎんこう,銀行,bank
+308,22,,,yuubinkyoku,ゆうびんきょく,郵便局,kantor pos
+309,22,,,taishikan,たいしかん,大使館,kedutaan
+310,22,,,kouban,こうばん,交番,pos polisi
+311,22,,,kaisha,かいしゃ,会社,"kantor, perusahaan"
+312,22,,,resutoran,レストラン,レストラン,restoran
+313,22,,,kissaten,きっさてん,喫茶店,kedai kopi
+314,22,,,mise,みせ,店,toko
+315,22,,,yaoya,やおや,八百屋,penjual sayur-mayur
+316,22,,,erebētā,エレベーター,エレベーター,"lift, elevator"
+317,22,,,esukarētā,エスカレーター,エスカレーター,tangga berjalan
+318,22,,,kaidan,かいだん,階段,tangga
+319,22,,,iriguchi,いりぐち,入口,pintu masuk
+320,22,,,deguchi,でぐち,出口,pintu keluar
+321,23,,,mon,もん,門,pintu gerbang
+322,23,,,niwa,にわ,庭,pekarangan
+323,23,,,genkan,げんかん,玄関,"pintu gerbang, pintu depan"
+324,23,,,"doa, to",ドア / と,ドア / 戸,pintu
+325,23,,,mado,まど,窓,jendela
+326,23,,,ima,いま,居間,"ruang tamu, ruang duduk"
+327,23,,,daidokoro,だいどころ,台所,dapur
+328,23,,,shokudou,しょくどう,食堂,"ruang makan, kantin"
+329,23,,,heya,へや,部屋,"kamar, ruang"
+330,23,,,furoba,ふろば,風呂場,kamar mandi
+331,23,,,shawa,シャワー,シャワー,"pancuran (mandi), shower"
+332,23,,,"otearai, toire",おてあらい / トイレ,お手洗い / トイレ,"kamar kecil, toilet"
+333,23,,,rouka,ろうか,廊下,lorong
+334,23,,,denki,でんき,電気,listrik
+335,23,,,suidou,すいどう,水道,saluran air ledeng
+336,24,,,sof(u)a,ソファー,ソファー,sofa
+337,24,,,isu,いす,椅子,kursi
+338,24,,,"tsukue, tēburu",つくえ / テーブル,机 / テーブル,meja
+339,24,,,hondana,ほんだな,本棚,rak buku
+340,24,,,beddo,ベッド,ベッド,"ranjang, tempat tidur"
+341,24,,,futon,ふとん,布団,tempat tidur ala Jepang
+342,24,,,reibou,れいぼう,冷房,"AC, pendingin ruangan"
+343,24,,,"danbou, sutōbu",だんぼう / ストーブ,暖房 / ストーブ,pemanas ruangan
+344,24,,,reidanboue,れいだんぼうえい,冷暖房,pengatur suhu udara panas dan dingin
+345,24,,,reizouko,れいぞうこ,冷蔵庫,"kulkas, lemari es"
+346,24,,,terebi,テレビ,テレビ,televisi
+347,24,,,tēpurekōdā,テープレコーダー,テープレコーダー,tape recorder
+348,24,,,rajio,ラジオ,ラジオ,radio
+349,24,,,"rajikase, rajiokasetto",ラジカセ / ラジオカセット,ラジカセ / ラジオカセット,radio kaset
+350,24,,,denwa,でんわ,電話,telepon
+351,24,,,e,え,絵,"gambar, lukisan"
+352,24,,,karendā,カレンダー,カレンダー,kalender
+353,24,,,tokei,とけい,時計,jam (dinding)
+354,24,,,kabin,かびん,花瓶,vas bunga
+355,24,,,haizara,はいざら,灰皿,asbak
+356,25,,,(o)sara,（お）さら,（お）皿,piring
+357,25,,,supūn,スプーン,スプーン,sendok
+358,25,,,f(u)ōku,フォーク,フォーク,garpu
+359,25,,,naifu,ナイフ,ナイフ,pisau
+360,25,,,(o)chawan,（お）ちゃわん,（お）茶碗,mangkok nasi
+361,25,,,(o)hashi,（お）はし,（お）箸,sumpit
+362,25,,,koppu,コップ,コップ,gelas
+363,25,,,kappu,カップ,カップ,cangkir
+364,26,,,satou,さとう,砂糖,gula pasir
+365,26,,,shio,しお,塩,garam
+366,26,,,koshou,こしょう,胡椒,"lada, merica"
+367,26,,,shouyu,しょうゆ,醤油,kecap asin
+368,26,,,choumiryou,ちょうみりょう,調味料,bumbu dapur
+369,27,,,kami,かみ,紙,kertas
+370,27,,,"pen, bōrupen",ペン / ボールペン,ペン / ボールペン,"pen, bolpen"
+371,27,,,mannenhitsu,まんねんひつ,万年筆,pen tinta
+372,27,,,enpitsu,えんぴつ,鉛筆,pensil
+373,27,,,hon,ほん,本,buku
+374,27,,,nōto,ノート,ノート,"buku tulis, notes"
+375,27,,,tegami,てがみ,手紙,kertas surat
+376,27,,,kitte,きって,切手,perangko
+377,27,,,hagaki,はがき,葉書,kartu pos
+378,27,,,fuutou,ふうとう,封筒,amplop
+379,27,,,tēpu,テープ,テープ,"pita, selotip"
+380,27,,,hako,はこ,箱,"kotak, box"
+381,28,,,shigoto,しごと,仕事,pekerjaan
+382,28,,,isha,いしゃ,医者,dokter
+383,28,,,keikan,けいかん,警官,polisi
+384,28,,,omawarisan,おまわりさん,お巡りさん,polisi patroli
+385,28,,,sensei,せんせい,先生,"guru, pengajar"
+386,28,,,seito,せいと,生徒,murid
+387,28,,,gakusei,がくせい,学生,"pelajar, mahasiswa"
+388,28,,,ryuugakusei,りゅうがくせい,留学生,pelajar asing
+389,29,,,ue,うえ,上,atas
+390,29,,,shita,した,下,bawah
+391,29,,,mae,まえ,前,depan
+392,29,,,ushiro,うしろ,後ろ,belakang
+393,29,,,soto,そと,外,luar
+394,29,,,naka,なか,中,dalam
+395,29,,,mukou,むこう,向こう,seberang sana
+396,29,,,temae,てまえ,手前,sebelah sini
+397,29,,,migi,みぎ,右,kanan
+398,29,,,hidari,ひだり,左,kiri
+399,29,,,tonari,となり,隣,"sebelah, tetangga"
+400,29,,,yoko,よこ,横,samping
+401,29,,,hen,へん,辺,sekitar
+402,29,,,chikaku,ちかく,近く,"dekat sini, sekitar"
+403,29,,,higashi,ひがし,東,timur
+404,29,,,nishi,にし,西,barat
+405,29,,,kita,きた,北,utara
+406,29,,,minami,みなみ,南,selatan
+407,30,,,kore,これ,これ,ini
+408,30,,,sore,それ,それ,itu
+409,30,,,are,あれ,あれ,itu (jauh)
+410,30,,,kono,この,この,benda ini
+411,30,,,sono,その,その,benda itu
+412,30,,,ano,あの,あの,benda itu (jauh)
+413,30,,,koko,ここ,ここ,sini
+414,30,,,soko,そこ,そこ,situ
+415,30,,,asoko,あそこ,あそこ,sana
+416,30,,,"kochira, kocchi",こちら / こっち,こちら / こっち,"arah sini, (Bentuk Hormat)"
+417,30,,,"sochira, socchi",そちら / そっち,そちら / そっち,"arah situ, Anda"
+418,30,,,"achira, acchi",あちら / あっち,あちら / あっち,arah sana
+419,30,,,konna,こんな,こんな,"begini, demikian ini"
+420,30,,,sonna,そんな,そんな,"begitu, demikian itu"
+421,30,,,anna,あんな,あんな,"begitu, demikian itu"
+422,31,,,"nan, nani",なん / なに,何,apa
+423,31,,,"dare, donata",だれ / どなた,誰 / どなた,siapa
+424,31,,,"doushite, naze, nande",どうして / なぜ / なんで,どうして / 何故 / 何で,mengapa
+425,31,,,doko,どこ,どこ,dimana
+426,31,,,"dochira, docchi",どちら / どっち,どちら / どっち,"arah mana, yang mana (pilihan 2 benda)"
+427,31,,,dono,どの,どの,yang mana
+428,31,,,dore,どれ,どれ,yang mana (pilihan 3 benda atau lebih)
+429,31,,,itsu,いつ,いつ,kapan
+430,31,,,ikura,いくら,いくら,berapa harganya
+431,31,,,ikutsu,いくつ,いくつ,"berapa buah, umur berapa"
+432,31,,,"ikaga, dou",いかが / どう,いかが / どう,bagaimana
+433,32,,,soshite,そして,そして,"dan, lalu"
+434,32,,,sorekara,それから,それから,"kemudian, setelah itu"
+435,32,,,"dewa, soredewa",では / それでは,では / それでは,kalau begitu
+436,32,,,demo,でも,でも,tetapi
+437,32,,,shikashi,しかし,しかし,tetapi
+438,32,,,amari,あまり,余り,"agak, tidak begitu"
+439,32,,,yori,より,より,daripada
+440,32,,,hou ga,ほうが,方が,lebih
+441,32,,,mata,また,また,"lagi, lagi pula"
+442,32,,,no mae ni,の前に,の前に,sebelum...
+443,32,,,ta ato de,た後で,た後で,sesudah...
+444,32,,,to issho ni,と一緒に,と一緒に,bersama dengan...
+445,33,,,ichiban,いちばん,一番,"nomor satu, paling"
+446,33,,,onaji,おなじ,同じ,sama
+447,33,,,takusan,たくさん,たくさん,banyak
+448,33,,,oozei,おおぜい,大勢,"banyak (manusia), ramai"
+449,33,,,kekkou,けっこう,結構,"cukup, bagus"
+450,33,,,totemo,とても,とても,sangat
+451,33,,,sukoshi,すこし,少し,"sedikit, agak"
+452,33,,,sukunai,すくない,少ない,kurang
+453,33,,,"mina, minasan",みんな / みなさん,皆 / 皆さん,"semua, setiap orang, anda sekalian"
+454,33,,,zenbu,ぜんぶ,全部,"seluruh, semua"
+455,33,,,hanbun,はんぶん,半分,"separuh, setengah"
+456,33,,,tabun,たぶん,多分,barangkali
+457,33,,,dandan,だんだん,だんだん,lambat laun
+458,33,,,chotto,ちょっと,ちょっと,"agak, sedikit, sebentar"
+459,33,,,choudo,ちょうど,ちょうど,"tepat, pas"
+460,33,,,tsugi,つぎ,次,"berikut, selanjutnya"
+461,33,,,tokidoki,ときどき,時々,kadang-kadang
+462,33,,,itsumo,いつも,いつも,selalu
+463,33,,,yoku,よく,よく,"sering, dengan baik"
+464,33,,,"jya, jyaa",じゃ / じゃあ,じゃ / じゃあ,kalau begitu
+465,33,,,saa,さあ,さあ,nah!
+466,33,,,nado,など,など,dan lain-lain
+467,33,,,hajime,はじめ,始め,"mula-mula, pertama-tama"
+468,33,,,hajimete,はじめて,初めて,pertama kali
+469,33,,,saigo,さいご,最後,terakhir
+470,33,,,daijyoubu,だいじょうぶ,大丈夫,tidak apa-apa
+471,33,,,kamaimasen,かまいません,構いません,tidak apa-apa
+472,33,,,tate,たて,縦,panjangnya
+473,33,,,yoko,よこ,横,lebarnya
+474,33,,,hoka,ほか,他,yang lain
+475,33,,,hontou ni,ほんとうに,本当に,"sungguh-sungguh, benar-benar"
+476,33,,,mada,まだ,まだ,"belum, masih"
+477,33,,,mou,もう,もう,"sudah, lagi"
+478,33,,,motto,もっと,もっと,lebih
+479,33,,,yukkuri,ゆっくり,ゆっくり,perlahan-lahan
+480,33,,,hayaku,はやく,早く,cepat-cepat
+481,34,,,aoi,あおい,青い,biru
+482,34,,,abunai,あぶない,危ない,bahaya
+483,34,,,akai,あかい,赤い,merah
+484,34,,,akarui,あかるい,明るい,"terang, cerah, ceria"
+485,34,,,amai,あまい,甘い,manis
+486,34,,,atarashii,あたらしい,新しい,baru
+487,34,,,atatakai,あたたかい,暖かい,hangat
+488,34,,,atsui,あつい,暑い,"tebal, dalam, ramah"
+489,34,,,atsui,あつい,暑い,panas (cuaca)
+490,34,,,atsui,あつい,熱い,panas (benda)
+491,34,,,chiisai,ちいさい,小さい,kecil
+492,34,,,chikai,ちかい,近い,dekat
+493,34,,,furui,ふるい,古い,"kuno, tua"
+494,34,,,futoi,ふとい,太い,gemuk
+495,34,,,hayai,はやい,速い,cepat (waktu)
+496,34,,,hayai,はやい,早い,cepat (laju)
+497,34,,,hikui,ひくい,低い,rendah
+498,34,,,hiroi,ひろい,広い,"luas, lapang"
+499,34,,,hoshii,ほしい,欲しい,ingin
+500,34,,,hosoi,ほそい,細い,kurus
+501,34,,,"ii, yoi",いい,良い,"baik, bagus"
+502,34,,,isogashii,いそがしい,忙しい,sibuk
+503,34,,,itai,いたい,痛い,sakit
+504,34,,,karai,からい,辛い,"pedas, asin"
+505,34,,,karui,かるい,軽い,ringan
+506,34,,,kawaii,かわいい,可愛い,"manis, mungil, lucu"
+507,34,,,kiiroi,きいろい,黄色い,kuning
+508,34,,,kitanai,きたない,汚い,kotor
+509,34,,,kurai,くらい,暗い,gelap
+510,34,,,kuroi,くろい,黒い,hitam
+511,34,,,marui,まるい,丸い,"bulat, bundar"
+512,34,,,mazui,まずい,まずい,"tidak enak, tawar"
+513,34,,,mijikai,みじかい,短い,pendek
+514,34,,,muzukashii,むずかしい,難しい,"sukar, susah, sulit"
+515,34,,,nagai,ながい,長い,panjang
+516,34,,,nurui,ぬるい,ぬるい,tidak cukup panas/dingin
+517,34,,,oishii,おいしい,美味しい,enak
+518,34,,,omoi,おもい,重い,berat
+519,34,,,omoshiroi,おもしろい,面白い,menarik
+520,34,,,ooi,おおい,多い,banyak
+521,34,,,ookii,おおきい,大きい,besar
+522,34,,,osoi,おそい,遅い,"lambat, lamban"
+523,34,,,samui,さむい,寒い,dingin (cuaca)
+524,34,,,semai,せまい,狭い,sempit
+525,34,,,shiroi,しろい,白い,putih
+526,34,,,sukunai,すくない,少ない,"sedikit, kurang"
+527,34,,,suzushii,すずしい,涼しい,sejuk
+528,34,,,takai,たかい,高い,"mahal, tinggi"
+529,34,,,tanoshii,たのしい,楽しい,menyenangkan
+530,34,,,tooi,とおい,遠い,jauh
+531,34,,,tsumaranai,つまらない,つまらない,membosankan
+532,34,,,tsumetai,つめたい,冷たい,dingin (benda)
+533,34,,,tsuyoi,つよい,強い,kuat
+534,34,,,urusai,うるさい,煩い,"berisik, gaduh, bawel"
+535,34,,,usui,うすい,薄い,tipis
+536,34,,,wakai,わかい,若い,muda
+537,34,,,warui,わるい,悪い,"jelek, buruk"
+538,34,,,yasashii,やさしい,優しい,"mudah, gampang"
+539,34,,,yasui,やすい,安い,murah
+540,34,,,yowai,よわい,弱い,lemah
+541,35,,,aoiiya,あおい,青い,biru
+542,35,,,benri,べんり,便利,praktis
+543,35,,,chiisa(na),ちいさ(な),小さ(な),kecil
+544,35,,,daisuki,だいすき,大好き,sangat suka
+545,35,,,genki,げんき,元気,"sehat, bersemangat"
+546,35,,,heta,へた,下手,"tidak mahir, bodoh"
+547,35,,,hima,ひま,暇,senggang
+548,35,,,iroiro,いろいろ,色々,macam-macam
+549,35,,,jyoubu,じょうぶ,丈夫,"kuat, tahan lama"
+550,35,,,jyouzu,じょうず,上手,mahir
+551,35,,,kirai,きらい,嫌い,"benci, tidak suka"
+552,35,,,kirei,きれい,綺麗,"cantik, bersih"
+553,35,,,nigiyaka,にぎやか,賑やか,"ramai, bising"
+554,35,,,ooki(na),おおき(な),大き(な),besar
+555,35,,,rippa,りっぱ,立派,megah
+556,35,,,shinsetsu,しんせつ,親切,"ramah, baik hati"
+557,35,,,shizuka,しずか,静か,tenang
+558,35,,,suki,すき,好き,suka
+559,35,,,taihen,たいへん,大変,menyusahkan
+560,35,,,taisetsu,たいせつ,大切,penting
+561,35,,,yuumei,ゆうめい,有名,"terkenal, ternama"
+562,36,,,akimasu,あきます,開きます,"buka, terbuka"
+563,36,,,arukimasu,あるきます,歩きます,berjalan kaki
+564,36,,,fukimasu,ふきます,吹きます,bertiup
+565,36,,,hakimasu,はきます,履きます,"mengenakan (celana, rok, kaus kaki)"
+566,36,,,hatarakimasu,はたらきます,働きます,bekerja
+567,36,,,hikimasu,ひきます,引きます,"menarik, terserang"
+568,36,,,hikimasu,ひきます,弾きます,"bermain (gitar, piano)"
+569,36,,,ikimasu,いきます,行きます,pergi
+570,36,,,kakimasu,かきます,書きます,menulis
+571,36,,,kikimasu,ききます,聞きます,"mendengar, bertanya"
+572,36,,,migakimasu,みがきます,磨きます,"menggosok, memoles"
+573,36,,,nakimasu,なきます,鳴きます,"bersuara, berbunyi (binatang)"
+574,36,,,okimasu,おきます,置きます,meletakkan
+575,36,,,sakimasu,さきます,咲きます,"berkembang, berbunga"
+576,36,,,tsukimasu,つきます,着きます,tiba
+577,36,,,nugimasu,ぬぎます,脱ぎます,menanggalkan
+578,36,,,oyogimasu,およぎます,泳ぎます,berenang
+579,36,,,asobimasu,あそびます,遊びます,"bermain, main-main"
+580,36,,,narabimasu,ならびます,並びます,berbaris
+581,36,,,tobimasu,とびます,飛びます,terbang
+582,36,,,yobimasu,よびます,呼びます,memanggil
+583,36,,,nomimasu,のみます,飲みます,minum
+584,36,,,sumimasu,すみます,住みます,tinggal
+585,36,,,tanomimasu,たのみます,頼みます,"meminta, memohon"
+586,36,,,yasumimasu,やすみます,休みます,beristirahat
+587,36,,,yomimasu,よみます,読みます,membaca
+588,36,,,shinimasu,しにます,死にます,"mati, meninggal"
+589,36,,,aimasu,あいます,会います,bertemu
+590,36,,,araimasu,あらいます,洗います,mencuci
+591,36,,,chigaimasu,ちがいます,違います,"berbeda, salah"
+592,36,,,iimasu,いいます,言います,berkata
+593,36,,,kaimasu,かいます,買います,membeli
+594,36,,,naraimasu,ならいます,習います,b belajar
+595,36,,,suimasu,すいます,吸います,menghisap
+596,36,,,tsukaimasu,つかいます,使います,menggunakan
+597,36,,,utaimasu,うたいます,歌います,bernyanyi
+598,36,,,machimasu,まちます,待ちます,menunggu
+599,36,,,mochimasu,もちます,持ちます,"membawa, mempunyai"
+600,36,,,tachimasu,たちます,立ちます,berdiri
+601,36,,,arimasu,あります,有ります,"ada, mempunyai (benda mati)"
+602,36,,,furimasu,ふります,降ります,"turun (hujan, salju)"
+603,36,,,hairimasu,はいります,入ります,"masuk, isi"
+604,36,,,hajimarimasu,はじまります,始まります,mulai
+605,36,,,harimasu,はります,貼ります,"menempelkan, melekatkan"
+606,36,,,hashirimasu,はしります,走ります,berlari
+607,36,,,irimasu,いります,要ります,"butuh, perlu"
+608,36,,,kaerimasu,かえります,帰ります,pulang
+609,36,,,kakarimasu,かかります,掛かります,"memerlukan (waktu, uang)"
+610,36,,,kirimasu,きります,切ります,memotong
+611,36,,,komarimasu,こまります,困ります,menyusahkan
+612,36,,,kumorimasu,くもります,曇ります,"mendung, berawan"
+613,36,,,magarimasu,まがります,曲がります,"membelok, melengkung"
+614,36,,,narimasu,なります,なります,menjadi
+615,36,,,noborimasu,のぼります,登ります,mendaki
+616,36,,,norimasu,のります,乗ります,naik (kendaraan)
+617,36,,,owarimasu,おわります,終わります,"selesai, berakhir"
+618,36,,,shimarimasu,しまります,閉まります,"tutup, tertutup"
+619,36,,,shirimasu,しります,知ります,"mengenal, mengetahui"
+620,36,,,suwarimasu,すわります,座ります,duduk
+621,36,,,tomarimasu,とまります,止まります,berhenti
+622,36,,,torimasu,とります,取ります,mengambil
+623,36,,,torimasu,とります,撮ります,"mengambil (foto, film)"
+624,36,,,tsukurimasu,つくります,作ります,membuat
+625,36,,,urimasu,うります,売ります,menjual
+626,36,,,wakarimasu,わかります,分かります,mengerti
+627,36,,,watarimasu,わたります,渡ります,menyeberang
+628,36,,,yarimasu,やります,やります,melakukan
+629,36,,,dashimasu,だします,出します,mengeluarkan
+630,36,,,hanashimasu,はなします,話します,berbicara
+631,36,,,kaeshimasu,かえします,返します,mengembalikan
+632,36,,,kashimasu,かします,貸します,meminjamkan
+633,36,,,keshimasu,けします,消します,"menghapus, memadamkan"
+634,36,,,nakushimasu,なくします,無くします,menghilangkan
+635,36,,,oshimasu,おします,押します,"mendorong, mencap"
+636,36,,,sashimasu,さします,指します,"mengulurkan (tangan), memakai (payung)"
+637,36,,,watashimasu,わたします,渡します,menyerahkan
+638,37,,,abimasu,あびます,浴びます,"mandi, menyiram"
+639,37,,,dekimasu,できます,出来ます,bisa
+640,37,,,imasu,います,居ます,"ada (manusia, binatang"
+641,37,,,karimasu,かります,借ります,meminjam
+642,37,,,kimasu,きます,着ます,"mengenakan (pakaian, kemeja)"
+643,37,,,mimasu,みます,見ます,"melihat, menonton"
+644,37,,,okimasu,おきます,起きます,bangun
+645,37,,,orimasu,おります,降ります,turun
+646,38,,,agemasu,あげます,上げます,memberi
+647,38,,,akemasu,あけます,開けます,membuka
+648,38,,,dekakemasu,でかけます,出かけます,keluar rumah
+649,38,,,demasu,でます,出ます,"keluar, meninggalkan"
+650,38,,,haremasu,はれます,晴れます,cerah
+651,38,,,iremasu,いれます,入れます,memasukkan
+652,38,,,kakemasu,かけます,掛けます,menggantung
+653,38,,,kiemasu,きえます,消えます,"hilang, padam"
+654,38,,,kotaemasu,こたえます,答えます,menjawab
+655,38,,,misemasu,みせます,見せます,memperlihatkan
+656,38,,,narabemasu,ならべます,並べます,"membariskan, menyusun"
+657,38,,,nemasu,ねます,寝ます,tidur
+658,38,,,oboemasu,おぼえます,覚えます,mengingat
+659,38,,,oshiemasu,おしえます,教えます,"mengajarkan, memberitahu"
+660,38,,,shimemasu,しめます,締めます,mengikat
+661,38,,,shimemasu,しめます,閉めます,menutup
+662,38,,,tabemasu,たべます,食べます,makan
+663,38,,,tsukaremasu,つかれます,疲れます,letih
+664,38,,,tsukemasu,つけます,点けます,"menyalakan (api, listrik)"
+665,38,,,tsutomemasu,つとめます,勤めます,"berdinas, bertugas"
+666,38,,,umaremasu,うまれます,生まれます,lahir
+667,38,,,wasuremasu,わすれます,忘れます,lupa
+668,39,,,kimasu,きます,来ます,datang
+669,40,,,shimasu,します,します,mengakukan
+670,40,,,benkyou shimasu,べんきょうします,勉強します,belajar
+671,40,,,kopī shimasu,こぴーします,コピーします,mengkopi
+672,40,,,renshuu shimasu,れんしゅうします,練習します,berlatih
+673,40,,,sanpo shimasu,さんぽします,散歩します,berjalan-jalan
+674,40,,,souji shimasu,そうじします,掃除します,"membersihkan, melap"

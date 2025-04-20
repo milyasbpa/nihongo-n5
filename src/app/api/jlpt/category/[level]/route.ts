@@ -16,7 +16,7 @@ export async function GET(
       "src",
       "data",
       level,
-      "category.csv"
+      "categories.csv"
     );
     const fileContent = fs.readFileSync(filePath, "utf-8");
 

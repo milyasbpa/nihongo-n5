@@ -1,22 +1,30 @@
-import fs from "fs";
-import path from "path";
-import Papa from "papaparse";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { createApiResponse } from "@/core/utils/api";
+import { LevelService } from "@/api/level/services";
+import { LevelController } from "@/api/level/controllers";
 
-export async function GET() {
-  try {
-    const filePath = path.join(process.cwd(), "src", "data", "level.csv");
-    const fileContent = fs.readFileSync(filePath, "utf-8");
+export async function GET(request: NextRequest) {
+  const controller = new LevelController();
+  const service = new LevelService();
 
-    const parsed = Papa.parse(fileContent, {
-      header: true,
-      skipEmptyLines: true,
-    });
-
-    // Return the response using the createApiResponse utility
+  const validation = await controller.getLevelList(request);
+  if (!validation.success) {
     return NextResponse.json(
-      createApiResponse(true, parsed.data, "Data fetched successfully")
+      createApiResponse(
+        false,
+        [],
+        "Validation failed",
+        validation.error.flatten().fieldErrors
+      ),
+      { status: 400 }
+    );
+  }
+
+  try {
+    const data = await service.getLevelList();
+
+    return NextResponse.json(
+      createApiResponse(true, data, "Data fetched successfully")
     );
   } catch (error) {
     return NextResponse.json(
@@ -25,7 +33,10 @@ export async function GET() {
         [],
         "Failed to fetch data",
         error instanceof Error ? error.message : "Unknown error"
-      )
+      ),
+      {
+        status: 500,
+      }
     );
   }
 }

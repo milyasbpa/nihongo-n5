@@ -1,0 +1,41 @@
+id,name,image_url,total,id-ID
+1,numbers,Numbers,17,angka
+2,ages,Ages,11,usia
+3,days,Calendar,8,hari
+4,dates,Clock,12,tanggal
+5,day_counts,Clock,13,jumlah hari
+6,time_expressions,Watch,41,keterangan waktu
+7,colors,Palette,8,warna
+8,units,Circle,15,satuan
+9,pronouns,User,9,kata ganti
+10,humans_and_body_parts,Heart,19,manusia dan bagian tubuh
+11,family,Users,14,keluarga
+12,nature,Tree,14,alam
+13,seasons,Sun,4,musim
+14,animals,Cat,8,binatang
+15,everyday_objects,Smartphone,21,benda yang digunakan sehari-hari
+16,clothing,Tshirt,11,pakaian
+17,food_and_drinks,Burger,29,makanan dan minuman
+18,hobbies,Gamepad,10,hobi
+19,cities,Building,10,kota
+20,transportation,Car,10,alat transportasi
+21,school_and_language_subjects,Clipboard,14,sekolah dan pelajaran bahasa
+22,buildings_and_parts,Building,22,bangunan dan bagiannya
+23,houses_and_parts,Home,15,rumah dan bagiannya
+24,household_items,Lamp,20,peralatan rumah tangga
+25,tableware,Fork,8,peralatan makan
+26,spices,Pepper,5,bumbu dapur
+27,stationery,Pen,12,alat tulis
+28,job_titles,Briefcase,8,jabatan pekerjaan
+29,directions,Compass,18,arah
+30,demonstratives,Pointer,15,kata penunjuk
+31,question_words,QuestionMark,11,kata tanya
+32,conjunctions,Link,12,kata sambung
+33,adverbs,ArrowUp,36,kata keterangan
+34,adjectives_i,CheckCircle,60,kata sifat 1
+35,adjectives_na,XCircle,21,kata sifat non i
+36,verbs_group_1,ArrowRight,76,kata kerja golongan 1
+37,verbs_group_2,ArrowDown,8,kata kerja golongan 2
+38,verbs_group_3,Play,22,kata kerja golongan 3
+39,verbs_group_4,FastForward,1,kata kerja golongan 4
+40,verbs_group_5,FastForward,6,kata kerja golongan 4

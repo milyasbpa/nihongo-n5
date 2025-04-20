@@ -1,3 +1,5 @@
+import { VocabularyCategoriesEntities } from "@/api/vocabulary/entities";
+import { ApiResponse } from "@/core/utils/api";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export interface GetCategoryListRequestInterface extends NextApiRequest {
@@ -17,17 +19,9 @@ export type GetCategoryListResponseInterface = NextApiResponse<
   | GetCategoryListErrorResponseInterface
 >;
 
-export interface GetCategoryListSuccessResponseInterface {
-  response_code: number;
-  response_status: string;
-  message: string;
-  data: {
-    id: string;
-    ["id-ID"]: string;
-  }[];
-
-  redirect: null;
-}
+export type GetCategoryListSuccessResponseInterface = ApiResponse<
+  VocabularyCategoriesEntities[]
+>;
 
 export interface GetCategoryListErrorResponseInterface {
   status: number;

@@ -8,10 +8,12 @@ import {
 } from "@/core/models/rest/jlpt/category";
 import { ChapterActionEnum, ChapterContext } from "../../context";
 import { fetchGetCategoryList } from "@/core/services/rest/jlpt/category";
+import { useSearchParams } from "next/navigation";
 
 export const useGetCategoryList = () => {
   const { state, dispatch } = React.useContext(ChapterContext);
-
+  const searchParams = useSearchParams();
+  const level = searchParams.get("level");
   const query = useQuery<
     GetCategoryListSuccessResponseInterface,
     GetCategoryListErrorResponseInterface
@@ -20,11 +22,12 @@ export const useGetCategoryList = () => {
     queryFn: () => {
       const payload: GetCategoryListPayloadRequestInterface = {
         params: {
-          level: "n5",
+          level: level?.toString() ?? "",
         },
       };
       return fetchGetCategoryList(payload);
     },
+    enabled: !!level,
   });
 
   React.useEffect(() => {
@@ -36,12 +39,13 @@ export const useGetCategoryList = () => {
           ...state.vocabulary,
           category: {
             ...state.vocabulary.category,
-            items: data.data.map((item) => {
-              return {
-                id: item.id,
-                name: item["id-ID"],
-              };
-            }),
+            items:
+              data.data?.map((item) => {
+                return {
+                  id: item.id,
+                  name: item["id-ID"],
+                };
+              }) ?? [],
           },
         },
       });

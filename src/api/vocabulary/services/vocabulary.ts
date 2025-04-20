@@ -1,11 +1,15 @@
 import fs from "fs";
 import path from "path";
 import Papa from "papaparse";
+import { VocabularyWordsEntities } from "../entities";
 
 export class VocabularyService {
   constructor() {}
 
-  generateMultipleChoiceQuestions = (data: any[], count = 5) => {
+  generateMultipleChoiceQuestions = (
+    data: VocabularyWordsEntities[],
+    count = 5
+  ) => {
     const shuffled = [...data].sort(() => Math.random() - 0.5);
     const questions = [];
 
@@ -24,7 +28,7 @@ export class VocabularyService {
           // id: String.fromCharCode(97 + index), // 'a', 'b', 'c', ...
           id: opt["id"],
           text: opt["id-ID"],
-          voice_url: opt["voice"],
+          voice_url: opt["voice_url"],
         }));
 
       const question = {
@@ -44,26 +48,28 @@ export class VocabularyService {
     return questions;
   };
 
-  async getQuestionList(data: { level: string; category: string }) {
+  async getQuestionList(data: { level: string; category_id: string }) {
     const filePath = path.join(
       process.cwd(),
       "src",
       "data",
       data.level,
-      "vocabulary",
-      "category",
-      `${data.category}.csv`
+      "words.csv"
     );
     const fileContent = fs.readFileSync(filePath, "utf-8");
 
-    const parsed = Papa.parse(fileContent, {
+    const parsed = Papa.parse<VocabularyWordsEntities>(fileContent, {
       header: true,
       skipEmptyLines: true,
     });
 
+    const filteredData = parsed.data.filter(
+      (item) => item.category_id === data.category_id
+    );
+
     const questions = this.generateMultipleChoiceQuestions(
-      parsed.data,
-      parsed.data.length
+      filteredData,
+      filteredData.length
     );
 
     return questions;

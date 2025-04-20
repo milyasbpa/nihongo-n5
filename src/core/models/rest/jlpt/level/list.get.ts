@@ -1,3 +1,5 @@
+import { GetLevelListResponseDTO } from "@/api/level/dto/level_list.get";
+import { ApiResponse } from "@/core/utils/api";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export interface GetLevelListRequestInterface extends NextApiRequest {
@@ -5,37 +7,26 @@ export interface GetLevelListRequestInterface extends NextApiRequest {
 }
 
 export interface GetLevelListPayloadRequestInterface {
-  path: GetLevelListPathRequestInterface;
-  params?: GetLevelListParamsRequestInterface;
+  path: GetLevelListPathPayloadRequestInterface;
+  params?: GetLevelListParamsPayloadRequestInterface;
 }
 
-export type GetLevelListPathRequestInterface = {
+export type GetLevelListPathPayloadRequestInterface = {
   id: string;
 };
 
-export type GetLevelListParamsRequestInterface = {
-  "filter[search]"?: string;
-  "filter[status]"?: string;
-  include?: string;
-  "page[number]"?: number;
-  "page[size]"?: number;
+export type GetLevelListParamsPayloadRequestInterface = {
+  page?: number;
+  limit?: number;
 };
 
 export type GetLevelListResponseInterface = NextApiResponse<
   GetLevelListSuccessResponseInterface | GetLevelListErrorResponseInterface
 >;
 
-export interface GetLevelListSuccessResponseInterface {
-  response_code: number;
-  response_status: string;
-  message: string;
-  data: {
-    id: string;
-    name: string;
-  }[];
-
-  redirect: null;
-}
+export type GetLevelListSuccessResponseInterface = ApiResponse<
+  GetLevelListResponseDTO[]
+>;
 
 export interface GetLevelListErrorResponseInterface {
   status: number;

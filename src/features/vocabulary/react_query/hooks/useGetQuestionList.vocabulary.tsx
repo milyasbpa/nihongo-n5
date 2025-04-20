@@ -14,7 +14,7 @@ export const useGetQuestionList = () => {
   const { state, dispatch } = React.useContext(VocabularyContext);
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
-  const category = searchParams.get("category");
+  const categoryId = searchParams.get("category_id");
 
   const query = useQuery<
     GetVocabularyQuestionListSuccessResponseInterface,
@@ -25,12 +25,12 @@ export const useGetQuestionList = () => {
       const payload: GetVocabularyQuestionListPayloadRequestInterface = {
         query: {
           level: String(level),
-          category: String(category),
+          category_id: String(categoryId),
         },
       };
       return fetchGetVocabularyQuestionList(payload);
     },
-    enabled: !!level && !!category,
+    enabled: !!level && !!categoryId,
   });
 
   React.useEffect(() => {
