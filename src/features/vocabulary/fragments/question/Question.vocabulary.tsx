@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { VocabularyContext } from "../../context";
 import SVGIcon from "@/core/icons";
 import { useGetQuestionList } from "../../react_query/hooks";
+import { AudioWave } from "@/core/components/audio_wave";
 
 export const QuestionVocabulary = () => {
   const { state } = React.useContext(VocabularyContext);
@@ -55,7 +56,9 @@ export const QuestionVocabulary = () => {
           "w-full"
         )}
       >
-        <h1 className={clsx("text-[black] text-[1.25rem] font-bold text-center")}>
+        <h1
+          className={clsx("text-[black] text-[1.25rem] font-bold text-center")}
+        >
           {state.question.data[state.question.selected].prompt.text}
         </h1>
       </div>
@@ -72,23 +75,7 @@ export const QuestionVocabulary = () => {
             className={clsx("w-[2rem] h-[2rem]", "text-[black]")}
           />
         </button>
-        <div className="flex gap-[4px] h-6 items-end">
-          {[...Array(4)].map((_, i) => (
-            <span
-              key={i}
-              className={`w-[4px] bg-black rounded-full ${
-                isPlaying ? "animate-duowave" : ""
-              }`}
-              style={{
-                height: "100%",
-                animationDelay: `${i * 0.2}s`,
-                animationDuration: "1s",
-                animationIterationCount: "infinite",
-                animationTimingFunction: "ease-in-out",
-              }}
-            />
-          ))}
-        </div>
+        <AudioWave isPlaying={isPlaying} />
 
         <audio
           ref={audioRef}
