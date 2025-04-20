@@ -43,8 +43,8 @@ export const useGetQuestionList = () => {
           selected: !data.data?.length ? null : 0,
           data:
             data.data
-              ?.filter((_, index) => index === 0)
-              .map((item) => {
+              // ?.filter((_, index) => index === 0)
+              ?.map((item) => {
                 return {
                   ...item,
                   correct: false,
