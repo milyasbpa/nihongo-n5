@@ -5,9 +5,9 @@ import {
   GetVocabularyCategoryListErrorResponseInterface,
   GetVocabularyCategoryListPayloadRequestInterface,
   GetVocabularyCategoryListSuccessResponseInterface,
-} from "@/core/models/rest/jlpt/category";
+} from "@/core/models/rest/jlpt/vocabulary";
 import { ChapterActionEnum, ChapterContext } from "../../context";
-import { fetchGetVocabularyCategoryList } from "@/core/services/rest/jlpt/category";
+import { fetchGetVocabularyCategoryList } from "@/core/services/rest/jlpt/vocabulary";
 import { useSearchParams } from "next/navigation";
 
 export const useGetVocabularyCategoryList = () => {
