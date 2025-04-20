@@ -1,10 +1,18 @@
 "use client";
 import React, { createContext, useReducer, Dispatch } from "react";
 import { ChapterActions, ChapterInitialStateType } from "./Chapter.types";
-import { ChapterVocabularyReducers } from "./Chapter.reducers";
+import {
+  ChapterKanjiReducers,
+  ChapterVocabularyReducers,
+} from "./Chapter.reducers";
 
 const initialState: ChapterInitialStateType = {
   vocabulary: {
+    category: {
+      items: [],
+    },
+  },
+  kanji: {
     category: {
       items: [],
     },
@@ -20,10 +28,11 @@ const ChapterContext = createContext<{
 });
 
 const mainReducer = (
-  { vocabulary }: ChapterInitialStateType,
+  { vocabulary, kanji }: ChapterInitialStateType,
   action: ChapterActions
 ) => ({
   vocabulary: ChapterVocabularyReducers(vocabulary, action),
+  kanji: ChapterKanjiReducers(kanji, action),
 });
 
 const ChapterProvider = (props: { children: React.ReactNode }) => {

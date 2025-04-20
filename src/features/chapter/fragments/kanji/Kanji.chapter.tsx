@@ -2,7 +2,7 @@
 import * as React from "react";
 import clsx from "clsx";
 import { ChapterContext } from "../../context";
-import { useGetVocabularyCategoryList } from "../../react_query/hooks";
+import { useGetKanjiCategoryList } from "../../react_query/hooks";
 import { getDictionaries } from "../../i18n";
 import Link from "next/link";
 import { AppCollectionURL } from "@/core/utils/router/constants/app";
@@ -11,7 +11,7 @@ import { useSearchParams } from "next/navigation";
 export const KanjiChapter = () => {
   const dictionaries = getDictionaries();
   const { state } = React.useContext(ChapterContext);
-  useGetVocabularyCategoryList();
+  useGetKanjiCategoryList();
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
   return (
@@ -22,7 +22,7 @@ export const KanjiChapter = () => {
       )}
     >
       <h2 className={clsx("text-[1.5rem] text-[#2222224D] font-medium")}>
-        {dictionaries.vocabulary.title}
+        {dictionaries.kanji.title}
       </h2>
       <div
         className={clsx(
@@ -31,10 +31,10 @@ export const KanjiChapter = () => {
           "overflow-auto"
         )}
       >
-        {state.vocabulary.category.items.map((category, categoryIndex) => {
+        {state.kanji.category.items.map((category, categoryIndex) => {
           const params = new URLSearchParams({
             level: level?.toString() ?? "",
-            category_id: category.id,
+            stroke: category.id,
           });
           return (
             <Link
@@ -54,7 +54,7 @@ export const KanjiChapter = () => {
                   className={clsx(
                     "w-[4rem] h-[4rem]",
                     "rounded-[50%]",
-                    "bg-amber-300"
+                    "bg-fuchsia-300"
                   )}
                 />
                 <p

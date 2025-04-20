@@ -1,6 +1,7 @@
 import {
   ChapterActionEnum,
   ChapterActions,
+  ChapterKanji,
   ChapterVocabulary,
 } from "./Chapter.types";
 
@@ -11,6 +12,20 @@ export const ChapterVocabularyReducers = (
 ) => {
   switch (action.type) {
     case ChapterActionEnum.SetVocabularyData:
+      return action.payload;
+
+    default:
+      return state;
+  }
+};
+
+// Kanji
+export const ChapterKanjiReducers = (
+  state: ChapterKanji,
+  action: ChapterActions
+) => {
+  switch (action.type) {
+    case ChapterActionEnum.SetKanjiData:
       return action.payload;
 
     default:

@@ -1,1 +1,2 @@
-export * from "./useGetCategoryList.chapter";
+export * from "./useGetVocabularyCategoryList.chapter";
+export * from "./useGetKanjiCategoryList.chapter";

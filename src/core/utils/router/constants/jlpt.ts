@@ -11,9 +11,7 @@ export const JLPTAPICollectionURL = {
     getQuestionList: () => `/api/jlpt/vocabulary/question/list`,
   },
   kanji: {
-    getCategoryList: (
-      params: GetVocabularyCategoryListParamsRequestInterface
-    ) => `/api/jlpt/kanji/category/${params.level}`,
+    getCategoryList: () => `/api/jlpt/kanji/category/list`,
     getQuestionList: () => `/api/jlpt/kanji/question/list`,
   },
 };
