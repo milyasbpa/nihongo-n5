@@ -6,16 +6,10 @@ export const getQuestionListRequestDTO = z.object({
   stroke: z.string(),
 });
 
-export interface KanjiListOptions {
-  id: string;
-  text: string;
-  voice_url: string;
-}
-
-export interface GetKanjiListResponseDTO {
+export interface GetKanjiQuestionListResponseDTO {
   id: string;
   prompt: {
     text: string;
   } & KanjiMasterEntities;
-  options: KanjiListOptions[];
+  options: KanjiMasterEntities[];
 }

@@ -6,7 +6,7 @@ import {
   KanjiActionEnum,
   KanjiContext,
 } from "../../context";
-import { QuestionListOptions } from "@/api/vocabulary/dto/question_list.get";
+import { KanjiMasterEntities } from "@/api/kanji/entities";
 
 export const AnswerVocabulary = () => {
   const { state, dispatch } = React.useContext(KanjiContext);
@@ -16,7 +16,7 @@ export const AnswerVocabulary = () => {
   }
 
   const handleClickAnswerButton = (
-    answer: QuestionListOptions,
+    answer: KanjiMasterEntities,
     question: QuestionWithCorrect
   ) => {
     dispatch({
@@ -68,7 +68,7 @@ export const AnswerVocabulary = () => {
             handleClickAnswerButton(option, state.question.data[selectedIndex])
           }
         >
-          {option.text}
+          {option.kunyomi}
         </button>
       ))}
     </div>

@@ -1,5 +1,5 @@
 export const VocabularyReactQueryKey = {
   GetQuestionList: () => {
-    return ["VocabularyReactQueryKey.GetLevelList"];
+    return ["VocabularyReactQueryKey.GetQuestionList"];
   },
 };

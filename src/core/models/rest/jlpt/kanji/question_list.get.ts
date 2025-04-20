@@ -1,4 +1,4 @@
-import { GetKanjiListResponseDTO } from "@/api/kanji/dto/question_list.get";
+import { GetKanjiQuestionListResponseDTO } from "@/api/kanji/dto/question_list.get";
 import { ApiResponse } from "@/core/utils/api";
 import { NextApiRequest, NextApiResponse } from "next";
 
@@ -11,7 +11,7 @@ export interface GetKanjiQuestionListPayloadRequestInterface {
 }
 
 export type GetKanjiQuestionListQueryPayloadRequestInterface = {
-  category_id: string;
+  stroke: string;
   level: string;
 };
 
@@ -21,7 +21,7 @@ export type GetKanjiQuestionListResponseInterface = NextApiResponse<
 >;
 
 export type GetKanjiQuestionListSuccessResponseInterface = ApiResponse<
-  GetKanjiListResponseDTO[]
+  GetKanjiQuestionListResponseDTO[]
 >;
 
 export interface GetKanjiQuestionListErrorResponseInterface {

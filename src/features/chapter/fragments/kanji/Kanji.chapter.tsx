@@ -43,7 +43,7 @@ export const KanjiChapter = () => {
                 "w-[4rem]"
               )}
               key={categoryIndex}
-              href={AppCollectionURL.public.vocabulary(params.toString())}
+              href={AppCollectionURL.public.kanji(params.toString())}
             >
               <div
                 className={clsx(

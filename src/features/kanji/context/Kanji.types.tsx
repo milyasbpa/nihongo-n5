@@ -1,4 +1,4 @@
-import { GetQuestionListResponseDTO } from "@/api/vocabulary/dto/question_list.get";
+import { GetKanjiQuestionListResponseDTO } from "@/api/kanji/dto/question_list.get";
 
 type ActionMap<M extends { [index: string]: any }> = {
   [Key in keyof M]: M[Key] extends undefined
@@ -22,7 +22,7 @@ export interface KanjiQuestion {
   data: QuestionWithCorrect[];
 }
 
-export type QuestionWithCorrect = GetQuestionListResponseDTO & {
+export type QuestionWithCorrect = GetKanjiQuestionListResponseDTO & {
   answers: string[];
   correct: boolean;
 };

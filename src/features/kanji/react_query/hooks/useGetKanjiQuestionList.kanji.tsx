@@ -2,35 +2,35 @@ import * as React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { KanjiReactQueryKey } from "../keys";
 import {
-  GetVocabularyQuestionListErrorResponseInterface,
-  GetVocabularyQuestionListPayloadRequestInterface,
-  GetVocabularyQuestionListSuccessResponseInterface,
-} from "@/core/models/rest/jlpt/vocabulary";
+  GetKanjiQuestionListErrorResponseInterface,
+  GetKanjiQuestionListPayloadRequestInterface,
+  GetKanjiQuestionListSuccessResponseInterface,
+} from "@/core/models/rest/jlpt/kanji";
 import { KanjiActionEnum, KanjiContext } from "../../context";
-import { fetchGetVocabularyQuestionList } from "@/core/services/rest/jlpt/vocabulary/question_list.get";
+import { fetchGetKanjiQuestionList } from "@/core/services/rest/jlpt/kanji";
 import { useSearchParams } from "next/navigation";
 
-export const useGetQuestionList = () => {
+export const useGetKanjiQuestionList = () => {
   const { state, dispatch } = React.useContext(KanjiContext);
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
-  const categoryId = searchParams.get("category_id");
+  const stroke = searchParams.get("stroke");
 
   const query = useQuery<
-    GetVocabularyQuestionListSuccessResponseInterface,
-    GetVocabularyQuestionListErrorResponseInterface
+    GetKanjiQuestionListSuccessResponseInterface,
+    GetKanjiQuestionListErrorResponseInterface
   >({
     queryKey: KanjiReactQueryKey.GetQuestionList(),
     queryFn: () => {
-      const payload: GetVocabularyQuestionListPayloadRequestInterface = {
+      const payload: GetKanjiQuestionListPayloadRequestInterface = {
         query: {
           level: String(level),
-          category_id: String(categoryId),
+          stroke: String(stroke),
         },
       };
-      return fetchGetVocabularyQuestionList(payload);
+      return fetchGetKanjiQuestionList(payload);
     },
-    enabled: !!level && !!categoryId,
+    enabled: !!level && !!stroke,
   });
 
   React.useEffect(() => {

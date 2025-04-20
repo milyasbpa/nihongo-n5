@@ -3,7 +3,7 @@ import { ENVIRONMENTS } from "@/core/environments";
 import { JLPTAPICollectionURL } from "@/core/utils/router/constants/jlpt";
 import { GetKanjiQuestionListPayloadRequestInterface } from "@/core/models/rest/jlpt/kanji";
 
-export const fetchGetVocabularyQuestionList = async (
+export const fetchGetKanjiQuestionList = async (
   payload?: GetKanjiQuestionListPayloadRequestInterface
 ) => {
   try {

@@ -1,1 +1,1 @@
-export * from "./useGetQuestionList.vocabulary";
+export * from "./useGetKanjiQuestionList.kanji";
