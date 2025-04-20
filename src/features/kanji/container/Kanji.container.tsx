@@ -4,11 +4,11 @@ import clsx from "clsx";
 import { ProgressVocabulary } from "../fragments/progress";
 import { QuestionVocabulary } from "../fragments/question";
 import { AnswerVocabulary } from "../fragments/answer";
-import { VocabularyContext } from "../context";
+import { KanjiContext } from "../context";
 import { FinishVocabulary } from "../fragments/finish";
 
-export const VocabularyContainer = () => {
-  const { state } = React.useContext(VocabularyContext);
+export const KanjiContainer = () => {
+  const { state } = React.useContext(KanjiContext);
   return (
     <React.Suspense>
       <div

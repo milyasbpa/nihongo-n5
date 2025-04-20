@@ -1,16 +1,12 @@
-import {
-  VocabularyActionEnum,
-  VocabularyActions,
-  VocabularyQuestion,
-} from "./Kanji.types";
+import { KanjiActionEnum, KanjiActions, KanjiQuestion } from "./Kanji.types";
 
 // Question
-export const VocabularyQuestionReducers = (
-  state: VocabularyQuestion,
-  action: VocabularyActions
+export const KanjiQuestionReducers = (
+  state: KanjiQuestion,
+  action: KanjiActions
 ) => {
   switch (action.type) {
-    case VocabularyActionEnum.SetQuestionData:
+    case KanjiActionEnum.SetQuestionData:
       return action.payload;
 
     default:

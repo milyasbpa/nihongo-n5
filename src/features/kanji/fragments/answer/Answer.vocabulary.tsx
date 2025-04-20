@@ -3,13 +3,13 @@ import * as React from "react";
 import clsx from "clsx";
 import {
   QuestionWithCorrect,
-  VocabularyActionEnum,
-  VocabularyContext,
+  KanjiActionEnum,
+  KanjiContext,
 } from "../../context";
 import { QuestionListOptions } from "@/api/vocabulary/dto/question_list.get";
 
 export const AnswerVocabulary = () => {
-  const { state, dispatch } = React.useContext(VocabularyContext);
+  const { state, dispatch } = React.useContext(KanjiContext);
   const selectedIndex = state.question.selected;
   if (selectedIndex === null) {
     return null;
@@ -20,7 +20,7 @@ export const AnswerVocabulary = () => {
     question: QuestionWithCorrect
   ) => {
     dispatch({
-      type: VocabularyActionEnum.SetQuestionData,
+      type: KanjiActionEnum.SetQuestionData,
       payload: {
         ...state.question,
         selected:

@@ -2,13 +2,13 @@
 import * as React from "react";
 import clsx from "clsx";
 import SVGIcon from "@/core/icons";
-import { VocabularyContext } from "../../context";
+import { KanjiContext } from "../../context";
 import Link from "next/link";
 import { AppCollectionURL } from "@/core/utils/router/constants/app";
 import { useSearchParams } from "next/navigation";
 
 export const ProgressVocabulary = () => {
-  const { state } = React.useContext(VocabularyContext);
+  const { state } = React.useContext(KanjiContext);
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
 

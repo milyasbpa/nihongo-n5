@@ -1,41 +1,38 @@
 "use client";
 import React, { createContext, useReducer, Dispatch } from "react";
-import {
-  VocabularyActions,
-  VocabularyInitialStateType,
-} from "./Kanji.types";
-import { VocabularyQuestionReducers } from "./Kanji.reducers";
+import { KanjiActions, KanjiInitialStateType } from "./Kanji.types";
+import { KanjiQuestionReducers } from "./Kanji.reducers";
 
-const initialState: VocabularyInitialStateType = {
+const initialState: KanjiInitialStateType = {
   question: {
     selected: null,
     data: [],
   },
 };
 
-const VocabularyContext = createContext<{
-  state: VocabularyInitialStateType;
-  dispatch: Dispatch<VocabularyActions>;
+const KanjiContext = createContext<{
+  state: KanjiInitialStateType;
+  dispatch: Dispatch<KanjiActions>;
 }>({
   state: initialState,
   dispatch: () => null,
 });
 
 const mainReducer = (
-  { question }: VocabularyInitialStateType,
-  action: VocabularyActions
+  { question }: KanjiInitialStateType,
+  action: KanjiActions
 ) => ({
-  question: VocabularyQuestionReducers(question, action),
+  question: KanjiQuestionReducers(question, action),
 });
 
-const VocabularyProvider = (props: { children: React.ReactNode }) => {
+const KanjiProvider = (props: { children: React.ReactNode }) => {
   const [state, dispatch] = useReducer(mainReducer, initialState);
 
   return (
-    <VocabularyContext.Provider value={{ state, dispatch }}>
+    <KanjiContext.Provider value={{ state, dispatch }}>
       {props.children}
-    </VocabularyContext.Provider>
+    </KanjiContext.Provider>
   );
 };
 
-export { VocabularyProvider, VocabularyContext };
+export { KanjiProvider, KanjiContext };

@@ -1,12 +1,12 @@
 "use client";
 import * as React from "react";
 import clsx from "clsx";
-import { VocabularyContext } from "../../context";
+import { KanjiContext } from "../../context";
 import { useGetQuestionList } from "../../react_query/hooks";
 import { KanjiQuestion } from "../../components/kanji_question";
 
 export const QuestionVocabulary = () => {
-  const { state } = React.useContext(VocabularyContext);
+  const { state } = React.useContext(KanjiContext);
   useGetQuestionList();
 
   if (state.question.selected === null) {
@@ -33,9 +33,7 @@ export const QuestionVocabulary = () => {
         </h1>
       </div>
 
-      <KanjiQuestion
-        kanji={state.question.data[state.question.selected].prompt.romanji}
-      />
+      <KanjiQuestion kanji={"二"} />
       {/* <AudioQuestion
         voice_url={
           state.question.data[state.question.selected].prompt.voice_url

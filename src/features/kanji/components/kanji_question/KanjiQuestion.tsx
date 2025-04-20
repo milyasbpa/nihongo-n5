@@ -10,7 +10,7 @@ export const KanjiQuestion = ({ kanji = "" }: KanjiQuestionProps) => {
 
   React.useEffect(() => {
     const loadSvg = async () => {
-      const codePoint = kanji.codePointAt(0)?.toString(16).padStart(4, "0");
+      const codePoint = kanji.codePointAt(0)?.toString(16).padStart(5, "0");
       const path = `/kanji/${codePoint}.svg`; // Adjust if served differently
 
       const res = await fetch(path);
@@ -20,6 +20,21 @@ export const KanjiQuestion = ({ kanji = "" }: KanjiQuestionProps) => {
 
     loadSvg();
   }, [kanji]);
+
+  // React.useEffect(() => {
+  //   const paths = svgRef.current?.querySelectorAll("path") ?? [];
+
+  //   paths.forEach((path, index) => {
+  //     const length = path.getTotalLength();
+  //     path.style.strokeDasharray = `${length}`;
+  //     path.style.strokeDashoffset = `${length}`;
+  //     path.style.animation = `draw-stroke 0.6s ease forwards`;
+  //     path.style.animationDelay = `${index * 0.5}s`; // delay antar stroke
+  //     path.style.stroke = "#000"; // warna stroke
+  //     path.style.fill = "none"; // pastikan tidak terisi
+  //     path.style.strokeWidth = "2";
+  //   });
+  // }, [svgContent]);
   return (
     <div>
       <svg

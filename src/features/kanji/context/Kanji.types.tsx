@@ -12,12 +12,12 @@ type ActionMap<M extends { [index: string]: any }> = {
 };
 
 // State Collection Types
-export interface VocabularyInitialStateType {
-  question: VocabularyQuestion;
+export interface KanjiInitialStateType {
+  question: KanjiQuestion;
 }
 
 // State Collection Types consist of:
-export interface VocabularyQuestion {
+export interface KanjiQuestion {
   selected: null | number;
   data: QuestionWithCorrect[];
 }
@@ -27,19 +27,19 @@ export type QuestionWithCorrect = GetQuestionListResponseDTO & {
   correct: boolean;
 };
 
-export enum VocabularyActionEnum {
+export enum KanjiActionEnum {
   // Question
   SetQuestionData = "SetQuestionData",
 }
 
 // Action Collection Types
-export type VocabularyActions = VocabularyQuestionActions;
+export type KanjiActions = KanjiQuestionActions;
 
 // Action Collection Types consist of:
 // Question
-type VocabularyQuestionPayload = {
-  [VocabularyActionEnum.SetQuestionData]: VocabularyQuestion;
+type KanjiQuestionPayload = {
+  [KanjiActionEnum.SetQuestionData]: KanjiQuestion;
 };
 
-export type VocabularyQuestionActions =
-  ActionMap<VocabularyQuestionPayload>[keyof ActionMap<VocabularyQuestionPayload>];
+export type KanjiQuestionActions =
+  ActionMap<KanjiQuestionPayload>[keyof ActionMap<KanjiQuestionPayload>];

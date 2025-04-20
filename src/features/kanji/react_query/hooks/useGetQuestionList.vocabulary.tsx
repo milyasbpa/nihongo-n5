@@ -1,17 +1,17 @@
 import * as React from "react";
 import { useQuery } from "@tanstack/react-query";
-import { VocabularyReactQueryKey } from "../keys";
+import { KanjiReactQueryKey } from "../keys";
 import {
   GetVocabularyQuestionListErrorResponseInterface,
   GetVocabularyQuestionListPayloadRequestInterface,
   GetVocabularyQuestionListSuccessResponseInterface,
 } from "@/core/models/rest/jlpt/vocabulary";
-import { VocabularyActionEnum, VocabularyContext } from "../../context";
+import { KanjiActionEnum, KanjiContext } from "../../context";
 import { fetchGetVocabularyQuestionList } from "@/core/services/rest/jlpt/vocabulary/question_list.get";
 import { useSearchParams } from "next/navigation";
 
 export const useGetQuestionList = () => {
-  const { state, dispatch } = React.useContext(VocabularyContext);
+  const { state, dispatch } = React.useContext(KanjiContext);
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
   const categoryId = searchParams.get("category_id");
@@ -20,7 +20,7 @@ export const useGetQuestionList = () => {
     GetVocabularyQuestionListSuccessResponseInterface,
     GetVocabularyQuestionListErrorResponseInterface
   >({
-    queryKey: VocabularyReactQueryKey.GetQuestionList(),
+    queryKey: KanjiReactQueryKey.GetQuestionList(),
     queryFn: () => {
       const payload: GetVocabularyQuestionListPayloadRequestInterface = {
         query: {
@@ -37,7 +37,7 @@ export const useGetQuestionList = () => {
     if (query.data && !query.isFetching) {
       const data = query.data;
       dispatch({
-        type: VocabularyActionEnum.SetQuestionData,
+        type: KanjiActionEnum.SetQuestionData,
         payload: {
           ...state.question,
           selected: !data.data?.length ? null : 0,
