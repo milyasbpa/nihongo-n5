@@ -1,34 +1,33 @@
-import fs from "fs";
-import path from "path";
-import Papa from "papaparse";
 import { NextResponse, NextRequest } from "next/server";
 import { createApiResponse } from "@/core/utils/api";
+import { VocabularyController } from "@/api/vocabulary/controllers";
+import { VocabularyService } from "@/api/vocabulary/services";
 
 export async function GET(
   _: NextRequest,
   { params }: { params: Promise<{ level: string }> }
 ) {
-  const { level } = await params;
+  const controller = new VocabularyController();
+  const service = new VocabularyService();
+
+  const validation = await controller.getCategoryList(params);
+  if (!validation.success) {
+    return NextResponse.json(
+      createApiResponse(
+        false,
+        [],
+        "Validation failed",
+        validation.error.flatten().fieldErrors
+      ),
+      { status: 400 }
+    );
+  }
 
   try {
-    const filePath = path.join(
-      process.cwd(),
-      "src",
-      "data",
-      level,
-      "vocabulary",
-      "categories.csv"
-    );
-    const fileContent = fs.readFileSync(filePath, "utf-8");
+    const data = await service.getCategoryList(validation.data);
 
-    const parsed = Papa.parse(fileContent, {
-      header: true,
-      skipEmptyLines: true,
-    });
-
-    // Return the response using the createApiResponse utility
     return NextResponse.json(
-      createApiResponse(true, parsed.data, "Data fetched successfully")
+      createApiResponse(true, data, "Data fetched successfully")
     );
   } catch (error) {
     return NextResponse.json(
@@ -37,7 +36,10 @@ export async function GET(
         [],
         "Failed to fetch data",
         error instanceof Error ? error.message : "Unknown error"
-      )
+      ),
+      {
+        status: 500,
+      }
     );
   }
 }

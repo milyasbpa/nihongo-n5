@@ -1,7 +1,7 @@
 import axios, { AxiosError } from "axios";
 import { ENVIRONMENTS } from "@/core/environments";
 import { JLPTAPICollectionURL } from "@/core/utils/router/constants/jlpt";
-import { GetVocabularyCategoryListPayloadRequestInterface } from "@/core/models/rest/jlpt/category";
+import { GetVocabularyCategoryListPayloadRequestInterface } from "@/core/models/rest/jlpt/vocabulary";
 
 export const fetchGetVocabularyCategoryList = async (
   payload: GetVocabularyCategoryListPayloadRequestInterface

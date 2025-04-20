@@ -1,7 +1,10 @@
 import fs from "fs";
 import path from "path";
 import Papa from "papaparse";
-import { VocabularyWordsEntities } from "../entities";
+import {
+  VocabularyCategoriesEntities,
+  VocabularyWordsEntities,
+} from "../entities";
 
 export class VocabularyService {
   constructor() {}
@@ -74,5 +77,24 @@ export class VocabularyService {
     );
 
     return questions;
+  }
+
+  async getCategoryList(data: { level: string }) {
+    const filePath = path.join(
+      process.cwd(),
+      "src",
+      "data",
+      data.level,
+      "vocabulary",
+      "categories.csv"
+    );
+    const fileContent = fs.readFileSync(filePath, "utf-8");
+
+    const parsed = Papa.parse<VocabularyCategoriesEntities>(fileContent, {
+      header: true,
+      skipEmptyLines: true,
+    });
+
+    return parsed.data;
   }
 }

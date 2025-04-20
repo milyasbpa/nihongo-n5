@@ -4,11 +4,10 @@ import { getCategoryListRequestDTO } from "../dto/category_list.get";
 
 export class VocabularyController {
   constructor() {}
-  async getCategoryList(request: NextRequest) {
-    const searchParams = request.nextUrl.searchParams;
-
+  async getCategoryList(params: Promise<{ level: string }>) {
+    const { level } = await params;
     const query = {
-      level: searchParams.get("level"),
+      level: level,
     };
 
     const result = getCategoryListRequestDTO.safeParse(query);
