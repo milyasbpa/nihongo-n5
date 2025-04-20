@@ -16,6 +16,9 @@ export const FinishVocabulary = () => {
   const params = new URLSearchParams({
     level: level?.toString() ?? "",
   });
+  const wrongAnswer = state.question.data.filter(
+    (item) => item.answers.length > 1
+  );
   return (
     <div
       className={clsx(
@@ -32,6 +35,8 @@ export const FinishVocabulary = () => {
       <p>{`${
         state.question.data.filter((item) => item.answers.length === 1).length
       }/${state.question.data.length}`}</p>
+      <p>{"List that you need to take note"}</p>
+      <p>{wrongAnswer.map((item) => item.prompt.kanji).join(", ")}</p>
       <Link href={AppCollectionURL.public.chapter(params.toString())}>
         {dictionaries.finish.cta.back.children}
       </Link>
