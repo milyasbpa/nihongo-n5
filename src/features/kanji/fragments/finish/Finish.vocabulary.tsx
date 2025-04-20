@@ -16,6 +16,11 @@ export const FinishVocabulary = () => {
   const params = new URLSearchParams({
     level: level?.toString() ?? "",
   });
+  const correctAnswer = state.question.data.filter(
+    (item) => item.answers.length === 1
+  );
+  const totalCorrectAnswerCount = correctAnswer.length;
+  const totalQuestionNumber = state.question.data.length;
   const wrongAnswer = state.question.data.filter(
     (item) => item.answers.length > 1
   );
@@ -32,9 +37,7 @@ export const FinishVocabulary = () => {
       />
       <p>{dictionaries.finish.message}</p>
       <p>{"Stats"}</p>
-      <p>{`${
-        state.question.data.filter((item) => item.answers.length === 1).length
-      }/${state.question.data.length}`}</p>
+      <p>{`${totalCorrectAnswerCount}/${totalQuestionNumber}`}</p>
       <p>{"List that you need to take note"}</p>
       <p>{wrongAnswer.map((item) => item.prompt.kanji).join(", ")}</p>
       <Link href={AppCollectionURL.public.chapter(params.toString())}>
