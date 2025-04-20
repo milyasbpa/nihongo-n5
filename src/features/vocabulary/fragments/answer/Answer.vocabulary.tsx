@@ -6,7 +6,7 @@ import {
   VocabularyActionEnum,
   VocabularyContext,
 } from "../../context";
-import { QuestionListOptions } from "@/api/vocabulary/dto/question_list.get";
+import { VocabularyWordsEntities } from "@/api/vocabulary/entities";
 
 export const AnswerVocabulary = () => {
   const { state, dispatch } = React.useContext(VocabularyContext);
@@ -16,7 +16,7 @@ export const AnswerVocabulary = () => {
   }
 
   const handleClickAnswerButton = (
-    answer: QuestionListOptions,
+    answer: VocabularyWordsEntities,
     question: QuestionWithCorrect
   ) => {
     dispatch({
@@ -48,29 +48,43 @@ export const AnswerVocabulary = () => {
         "w-full"
       )}
     >
-      {state.question.data[selectedIndex].options.map((option, optionIndex) => (
-        <button
-          key={optionIndex}
-          className={clsx(
-            "grid grid-cols-1 place-content-center place-items-center",
-            "py-[0.875rem]",
-            "w-full",
-            "text-[1rem] text-[#222222] font-semibold",
-            state.question.data[selectedIndex].answers.includes(option.id) &&
-              option.id !== state.question.data[selectedIndex].prompt.id
-              ? "bg-[red]"
-              : "bg-[white]",
-            "border border-[#222222]",
-            "rounded-[0.5rem]",
-            "capitalize"
-          )}
-          onClick={() =>
-            handleClickAnswerButton(option, state.question.data[selectedIndex])
-          }
-        >
-          {option.text}
-        </button>
-      ))}
+      {state.question.data[selectedIndex].options.map((option, optionIndex) => {
+        const optionText =
+          state.question.settings.answer.selected?.name === "ja-JP"
+            ? option["ja-JP"]
+            : state.question.settings.answer.selected?.name === "romanji"
+            ? option["romanji"]
+            : state.question.settings.answer.selected?.name ===
+              "hiragana_katakana"
+            ? option["hiragana_katakana"]
+            : option["id-ID"];
+        return (
+          <button
+            key={optionIndex}
+            className={clsx(
+              "grid grid-cols-1 place-content-center place-items-center",
+              "py-[0.875rem]",
+              "w-full",
+              "text-[1rem] text-[#222222] font-semibold",
+              state.question.data[selectedIndex].answers.includes(option.id) &&
+                option.id !== state.question.data[selectedIndex].prompt.id
+                ? "bg-[red]"
+                : "bg-[white]",
+              "border border-[#222222]",
+              "rounded-[0.5rem]",
+              "capitalize"
+            )}
+            onClick={() =>
+              handleClickAnswerButton(
+                option,
+                state.question.data[selectedIndex]
+              )
+            }
+          >
+            {optionText}
+          </button>
+        );
+      })}
     </div>
   );
 };

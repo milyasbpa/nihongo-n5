@@ -6,6 +6,7 @@ import { QuestionVocabulary } from "../fragments/question";
 import { AnswerVocabulary } from "../fragments/answer";
 import { VocabularyContext } from "../context";
 import { FinishVocabulary } from "../fragments/finish";
+import { SettingsVocabulary } from "../fragments/settings";
 
 export const VocabularyContainer = () => {
   const { state } = React.useContext(VocabularyContext);
@@ -26,6 +27,7 @@ export const VocabularyContainer = () => {
         ) : (
           <FinishVocabulary />
         )}
+        <SettingsVocabulary />
       </div>
     </React.Suspense>
   );

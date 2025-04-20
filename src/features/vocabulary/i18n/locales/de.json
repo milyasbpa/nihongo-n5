@@ -18,5 +18,69 @@
         "children": "Back"
       }
     }
+  },
+  "settings": {
+    "list": [
+      {
+        "id": "1",
+        "name": "voice_url",
+        "type": "question"
+      },
+      {
+        "id": "2",
+        "name": "image_url",
+        "type": "question"
+      },
+      {
+        "id": "3",
+        "name": "romanji",
+        "type": "question"
+      },
+      {
+        "id": "4",
+        "name": "hiragana_katakana",
+        "type": "question"
+      },
+      {
+        "id": "5",
+        "name": "ja-JP",
+        "type": "question"
+      },
+      {
+        "id": "6",
+        "name": "id-ID",
+        "type": "question"
+      },
+      {
+        "id": "7",
+        "name": "voice_url",
+        "type": "answer"
+      },
+      {
+        "id": "8",
+        "name": "image_url",
+        "type": "answer"
+      },
+      {
+        "id": "9",
+        "name": "romanji",
+        "type": "answer"
+      },
+      {
+        "id": "10",
+        "name": "hiragana_katakana",
+        "type": "answer"
+      },
+      {
+        "id": "11",
+        "name": "ja-JP",
+        "type": "answer"
+      },
+      {
+        "id": "12",
+        "name": "id-ID",
+        "type": "answer"
+      }
+    ]
   }
 }

@@ -6,16 +6,10 @@ export const getQuestionListRequestDTO = z.object({
   category_id: z.string().min(1, "Category is required"),
 });
 
-export interface QuestionListOptions {
-  id: string;
-  text: string;
-  voice_url: string;
-}
-
 export interface GetQuestionListResponseDTO {
   id: string;
   prompt: {
     text: string;
   } & VocabularyWordsEntities;
-  options: QuestionListOptions[];
+  options: VocabularyWordsEntities[];
 }

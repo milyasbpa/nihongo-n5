@@ -10,6 +10,17 @@ const initialState: VocabularyInitialStateType = {
   question: {
     selected: null,
     data: [],
+    settings: {
+      is_open: false,
+      question: {
+        selected: [],
+        options: [],
+      },
+      answer: {
+        selected: null,
+        options: [],
+      },
+    },
   },
 };
 

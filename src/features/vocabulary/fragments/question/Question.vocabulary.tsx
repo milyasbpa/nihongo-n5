@@ -12,6 +12,11 @@ export const QuestionVocabulary = () => {
   if (state.question.selected === null) {
     return null;
   }
+  const questionSettingList = state.question.settings.question.selected.map(
+    (item) => item.name
+  );
+
+  console.log(questionSettingList, "ini apa");
 
   return (
     <div
@@ -33,9 +38,40 @@ export const QuestionVocabulary = () => {
         </h1>
       </div>
 
-      <TextQuestion
-        text={state.question.data[state.question.selected].prompt.romanji}
-      />
+      <div
+        className={clsx(
+          "grid grid-cols-1 items-start content-start justify-center justify-items-center gap-[1rem]",
+          "w-full"
+        )}
+      >
+        {questionSettingList.includes("hiragana_katakana") && (
+          <TextQuestion
+            text={
+              state.question.data[state.question.selected].prompt
+                .hiragana_katakana
+            }
+            className={clsx("!text-[2rem]")}
+          />
+        )}
+
+        {questionSettingList.includes("ja-JP") && (
+          <TextQuestion
+            text={
+              state.question.data[state.question.selected].prompt
+                ["ja-JP"]
+            }
+            className={clsx("!text-[1.5rem]")}
+          />
+        )}
+
+        {questionSettingList.includes("romanji") && (
+          <TextQuestion
+            text={state.question.data[state.question.selected].prompt.romanji}
+            className={clsx("!text-[1.5rem]")}
+          />
+        )}
+      </div>
+
       {/* <AudioQuestion
         voice_url={
           state.question.data[state.question.selected].prompt.voice_url

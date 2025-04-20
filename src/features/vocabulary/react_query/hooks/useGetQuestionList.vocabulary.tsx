@@ -42,15 +42,13 @@ export const useGetQuestionList = () => {
           ...state.question,
           selected: !data.data?.length ? null : 0,
           data:
-            data.data
-              // ?.filter((_, index) => index === 0)
-              ?.map((item) => {
-                return {
-                  ...item,
-                  correct: false,
-                  answers: [],
-                };
-              }) ?? [],
+            data.data?.map((item) => {
+              return {
+                ...item,
+                correct: false,
+                answers: [],
+              };
+            }) ?? [],
         },
       });
     }

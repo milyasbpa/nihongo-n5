@@ -27,12 +27,7 @@ export class VocabularyService {
 
       const allOptions = [...wrongOptions, current]
         .sort(() => Math.random() - 0.5)
-        .map((opt) => ({
-          // id: String.fromCharCode(97 + index), // 'a', 'b', 'c', ...
-          id: opt["id"],
-          text: opt["id-ID"],
-          voice_url: opt["voice_url"],
-        }));
+        .map((opt) => opt);
 
       const question = {
         id: `q${i + 1}`,
