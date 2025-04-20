@@ -56,10 +56,7 @@ export const QuestionVocabulary = () => {
 
         {questionSettingList.includes("ja-JP") && (
           <TextQuestion
-            text={
-              state.question.data[state.question.selected].prompt
-                ["ja-JP"]
-            }
+            text={state.question.data[state.question.selected].prompt["ja-JP"]}
             className={clsx("!text-[1.5rem]")}
           />
         )}
@@ -67,6 +64,13 @@ export const QuestionVocabulary = () => {
         {questionSettingList.includes("romanji") && (
           <TextQuestion
             text={state.question.data[state.question.selected].prompt.romanji}
+            className={clsx("!text-[1.5rem]")}
+          />
+        )}
+
+        {questionSettingList.includes("id-ID") && (
+          <TextQuestion
+            text={state.question.data[state.question.selected].prompt["id-ID"]}
             className={clsx("!text-[1.5rem]")}
           />
         )}
