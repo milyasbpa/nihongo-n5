@@ -1,15 +1,15 @@
 import axios, { AxiosError } from "axios";
 import { ENVIRONMENTS } from "@/core/environments";
 import { JLPTAPICollectionURL } from "@/core/utils/router/constants/jlpt";
-import { GetCategoryListPayloadRequestInterface } from "@/core/models/rest/jlpt/category";
+import { GetVocabularyCategoryListPayloadRequestInterface } from "@/core/models/rest/jlpt/category";
 
-export const fetchGetCategoryList = async (
-  payload: GetCategoryListPayloadRequestInterface
+export const fetchGetVocabularyCategoryList = async (
+  payload: GetVocabularyCategoryListPayloadRequestInterface
 ) => {
   try {
     const url = `${
       ENVIRONMENTS.JLPT_API_URL
-    }${JLPTAPICollectionURL.category.getList(payload.params)}`;
+    }${JLPTAPICollectionURL.vocabulary.getCategoryList(payload.params)}`;
 
     const res = await axios.get(url);
     return res.data;

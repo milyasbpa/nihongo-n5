@@ -1,5 +1,5 @@
 export const ChapterReactQueryKey = {
-  GetCategoryList: () => {
+  GetVocabularyCategoryList: () => {
     return ["ChapterReactQueryKey.GetLevelList"];
   },
 };

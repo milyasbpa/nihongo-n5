@@ -2,7 +2,7 @@
 import * as React from "react";
 import clsx from "clsx";
 import { ChapterContext } from "../../context";
-import { useGetCategoryList } from "../../react_query/hooks";
+import { useGetVocabularyCategoryList } from "../../react_query/hooks";
 import { getDictionaries } from "../../i18n";
 import Link from "next/link";
 import { AppCollectionURL } from "@/core/utils/router/constants/app";
@@ -11,7 +11,7 @@ import { useSearchParams } from "next/navigation";
 export const VocabularyChapter = () => {
   const dictionaries = getDictionaries();
   const { state } = React.useContext(ChapterContext);
-  useGetCategoryList();
+  useGetVocabularyCategoryList();
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
   return (

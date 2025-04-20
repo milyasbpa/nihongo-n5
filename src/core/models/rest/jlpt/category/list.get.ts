@@ -2,28 +2,28 @@ import { VocabularyCategoriesEntities } from "@/api/vocabulary/entities";
 import { ApiResponse } from "@/core/utils/api";
 import { NextApiRequest, NextApiResponse } from "next";
 
-export interface GetCategoryListRequestInterface extends NextApiRequest {
-  payload: GetCategoryListPayloadRequestInterface;
+export interface GetVocabularyCategoryListRequestInterface extends NextApiRequest {
+  payload: GetVocabularyCategoryListPayloadRequestInterface;
 }
 
-export interface GetCategoryListPayloadRequestInterface {
-  params: GetCategoryListParamsRequestInterface;
+export interface GetVocabularyCategoryListPayloadRequestInterface {
+  params: GetVocabularyCategoryListParamsRequestInterface;
 }
 
-export type GetCategoryListParamsRequestInterface = {
+export type GetVocabularyCategoryListParamsRequestInterface = {
   level: string;
 };
 
-export type GetCategoryListResponseInterface = NextApiResponse<
-  | GetCategoryListSuccessResponseInterface
-  | GetCategoryListErrorResponseInterface
+export type GetVocabularyCategoryListResponseInterface = NextApiResponse<
+  | GetVocabularyCategoryListSuccessResponseInterface
+  | GetVocabularyCategoryListErrorResponseInterface
 >;
 
-export type GetCategoryListSuccessResponseInterface = ApiResponse<
+export type GetVocabularyCategoryListSuccessResponseInterface = ApiResponse<
   VocabularyCategoriesEntities[]
 >;
 
-export interface GetCategoryListErrorResponseInterface {
+export interface GetVocabularyCategoryListErrorResponseInterface {
   status: number;
   message: string;
   name: string;

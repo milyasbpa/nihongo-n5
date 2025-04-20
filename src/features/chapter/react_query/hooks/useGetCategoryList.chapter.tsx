@@ -2,30 +2,30 @@ import * as React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { ChapterReactQueryKey } from "../keys";
 import {
-  GetCategoryListErrorResponseInterface,
-  GetCategoryListPayloadRequestInterface,
-  GetCategoryListSuccessResponseInterface,
+  GetVocabularyCategoryListErrorResponseInterface,
+  GetVocabularyCategoryListPayloadRequestInterface,
+  GetVocabularyCategoryListSuccessResponseInterface,
 } from "@/core/models/rest/jlpt/category";
 import { ChapterActionEnum, ChapterContext } from "../../context";
-import { fetchGetCategoryList } from "@/core/services/rest/jlpt/category";
+import { fetchGetVocabularyCategoryList } from "@/core/services/rest/jlpt/category";
 import { useSearchParams } from "next/navigation";
 
-export const useGetCategoryList = () => {
+export const useGetVocabularyCategoryList = () => {
   const { state, dispatch } = React.useContext(ChapterContext);
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
   const query = useQuery<
-    GetCategoryListSuccessResponseInterface,
-    GetCategoryListErrorResponseInterface
+    GetVocabularyCategoryListSuccessResponseInterface,
+    GetVocabularyCategoryListErrorResponseInterface
   >({
-    queryKey: ChapterReactQueryKey.GetCategoryList(),
+    queryKey: ChapterReactQueryKey.GetVocabularyCategoryList(),
     queryFn: () => {
-      const payload: GetCategoryListPayloadRequestInterface = {
+      const payload: GetVocabularyCategoryListPayloadRequestInterface = {
         params: {
           level: level?.toString() ?? "",
         },
       };
-      return fetchGetCategoryList(payload);
+      return fetchGetVocabularyCategoryList(payload);
     },
     enabled: !!level,
   });
