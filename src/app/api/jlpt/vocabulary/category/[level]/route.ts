@@ -16,6 +16,7 @@ export async function GET(
       "src",
       "data",
       level,
+      "vocabulary",
       "categories.csv"
     );
     const fileContent = fs.readFileSync(filePath, "utf-8");

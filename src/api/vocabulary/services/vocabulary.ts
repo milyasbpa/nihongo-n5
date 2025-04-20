@@ -54,6 +54,7 @@ export class VocabularyService {
       "src",
       "data",
       data.level,
+      "vocabulary",
       "words.csv"
     );
     const fileContent = fs.readFileSync(filePath, "utf-8");
