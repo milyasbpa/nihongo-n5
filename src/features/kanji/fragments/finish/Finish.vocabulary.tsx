@@ -5,9 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { AppCollectionURL } from "@/core/utils/router/constants/app";
 import { useSearchParams } from "next/navigation";
+import { KanjiContext } from "../../context";
 
 export const FinishVocabulary = () => {
   const dictionaries = getDictionaries();
+  const { state } = React.useContext(KanjiContext);
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
 
@@ -26,6 +28,10 @@ export const FinishVocabulary = () => {
         className={clsx("w-[240px] h-[240px]")}
       />
       <p>{dictionaries.finish.message}</p>
+      <p>{"Stats"}</p>
+      <p>{`${
+        state.question.data.filter((item) => item.answers.length === 1).length
+      }/${state.question.data.length}`}</p>
       <Link href={AppCollectionURL.public.chapter(params.toString())}>
         {dictionaries.finish.cta.back.children}
       </Link>
