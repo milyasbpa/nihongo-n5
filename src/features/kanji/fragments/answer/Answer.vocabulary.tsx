@@ -44,8 +44,11 @@ export const AnswerVocabulary = () => {
   return (
     <div
       className={clsx(
-        "grid grid-cols-2 place-content-start place-items-start gap-[1rem]",
-        "w-full"
+        "grid place-content-start place-items-start gap-[1rem]",
+        "w-full",
+        state.question.data[selectedIndex].options.length > 1
+          ? "grid-cols-2"
+          : "grid-cols-1"
       )}
     >
       {state.question.data[selectedIndex].options.map((option, optionIndex) => (
