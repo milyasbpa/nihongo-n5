@@ -1,0 +1,22 @@
+{
+  "flag": {
+    "src": "/images/flag.svg",
+    "width": 32,
+    "height": 32,
+    "alt": "flag"
+  },
+  "finish": {
+    "illustration": {
+      "src": "/images/vocabulary/success.png",
+      "width": 1024,
+      "height": 1024,
+      "alt": "flag"
+    },
+    "message": "you finished",
+    "cta": {
+      "back": {
+        "children": "Back"
+      }
+    }
+  }
+}
