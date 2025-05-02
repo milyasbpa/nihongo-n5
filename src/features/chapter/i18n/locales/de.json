@@ -4,5 +4,15 @@
   },
   "kanji": {
     "title": "Kanji"
-  }
+  },
+  "items": [
+    {
+      "id": "vocabulary",
+      "name": "Vocabulary"
+    },
+    {
+      "id": "kanji",
+      "name": "Kanji"
+    }
+  ]
 }

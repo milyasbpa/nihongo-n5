@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useReducer, Dispatch, useEffect } from "react";
+import React, { createContext, useReducer, Dispatch } from "react";
 import { ChapterActions, ChapterInitialStateType } from "./Chapter.types";
 import {
   ChapterKanjiReducers,
