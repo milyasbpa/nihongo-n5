@@ -77,12 +77,15 @@ export const AnswerVocabulary = () => {
               "rounded-[0.5rem]",
               "capitalize"
             )}
-            onClick={() =>
+            onClick={() => {
+              const utterance = new SpeechSynthesisUtterance(optionText);
+              utterance.lang = "ja-JP"; // Bisa diganti ke 'en-US', 'ja-JP', dll
+              speechSynthesis.speak(utterance);
               handleClickAnswerButton(
                 option,
                 state.question.data[selectedIndex]
-              )
-            }
+              );
+            }}
           >
             {optionText}
           </button>
