@@ -24,8 +24,8 @@ export const ChapterContainer = () => {
         <SVGIcon name="ChevronLeft" />
         {"Back"}
       </Link>
-      <VocabularyChapter />
       <KanjiChapter />
+      <VocabularyChapter />
     </div>
   );
 };

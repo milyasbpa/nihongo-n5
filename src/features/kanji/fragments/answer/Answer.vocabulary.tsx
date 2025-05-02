@@ -63,12 +63,15 @@ export const AnswerVocabulary = () => {
                 : "default"
             }
             className={clsx("w-full")}
-            onClick={() =>
+            onClick={() => {
+              const utterance = new SpeechSynthesisUtterance(option.read);
+              utterance.lang = "ja-JP"; // Bisa diganti ke 'en-US', 'ja-JP', dll
+              speechSynthesis.speak(utterance);
               handleClickAnswerButton(
                 option,
                 state.question.data[selectedIndex]
-              )
-            }
+              );
+            }}
           >
             {option.read}
           </Button>
