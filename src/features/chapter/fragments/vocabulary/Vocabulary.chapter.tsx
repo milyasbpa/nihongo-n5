@@ -2,7 +2,6 @@
 import * as React from "react";
 import clsx from "clsx";
 import { ChapterContext } from "../../context";
-import { useGetVocabularyCategoryList } from "../../react_query/hooks";
 import { getDictionaries } from "../../i18n";
 import Link from "next/link";
 import { AppCollectionURL } from "@/core/utils/router/constants/app";
@@ -12,10 +11,10 @@ import { Accordion } from "@/core/components/accordion";
 export const VocabularyChapter = () => {
   const dictionaries = getDictionaries();
   const { state } = React.useContext(ChapterContext);
-  // useGetVocabularyCategoryList();
+
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
-  console.log(state,'ini state')
+
   return (
     <div
       className={clsx(
