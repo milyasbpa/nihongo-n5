@@ -2,12 +2,9 @@
 import * as React from "react";
 import clsx from "clsx";
 import { KanjiContext } from "../../context";
-import { useGetKanjiQuestionList } from "../../react_query/hooks";
-import { KanjiQuestion } from "../../components/kanji_question";
 
 export const QuestionVocabulary = () => {
   const { state } = React.useContext(KanjiContext);
-  useGetKanjiQuestionList();
 
   if (state.question.selected === null) {
     return null;
@@ -31,16 +28,11 @@ export const QuestionVocabulary = () => {
         >
           {state.question.data[state.question.selected].prompt.text}
         </h1>
-      </div>
 
-      <KanjiQuestion
-        kanji={state.question.data[state.question.selected].prompt.kanji}
-      />
-      {/* <AudioQuestion
-        voice_url={
-          state.question.data[state.question.selected].prompt.voice_url
-        }
-      /> */}
+        <h2 className={clsx("text-[black] text-[4rem] font-bold text-center")}>
+          {state.question.data[state.question.selected].prompt.example}
+        </h2>
+      </div>
     </div>
   );
 };

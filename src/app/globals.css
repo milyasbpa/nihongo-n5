@@ -111,7 +111,7 @@
 } */
 
 body {
-  /* background: var(--pastel-background); */
+  background: var(--background);
   font-family: "Fredoka", sans-serif;
 }
 

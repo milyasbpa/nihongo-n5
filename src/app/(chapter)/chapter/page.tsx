@@ -6,12 +6,12 @@ import {
   GetVocabularyCategoryListPayloadRequestInterface,
   GetVocabularyCategoryListSuccessResponseInterface,
 } from "@/core/models/rest/jlpt/vocabulary";
+import { getKanjiList } from "@/features/chapter/server/actions/getKanjiList";
 
 export default async function Home({
   searchParams,
 }: {
   searchParams: Promise<{ level?: string }>;
-  params: Promise<{ level: string }>;
 }) {
   const query = await searchParams;
 
@@ -42,6 +42,29 @@ export default async function Home({
         },
       };
     }
+  } catch (err) {
+    console.log(err?.toString());
+  }
+
+  try {
+    const data = await getKanjiList({ level: query.level ?? "" });
+    state = {
+      ...state,
+      kanji: {
+        ...state.kanji,
+        category: {
+          ...state.kanji.category,
+          items:
+            data?.map((item) => {
+              return {
+                id: item.id,
+                name: item.name,
+                description: item.description,
+              };
+            }) ?? [],
+        },
+      },
+    };
   } catch (err) {
     console.log(err?.toString());
   }

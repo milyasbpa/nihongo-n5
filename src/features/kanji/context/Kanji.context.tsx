@@ -2,13 +2,7 @@
 import React, { createContext, useReducer, Dispatch } from "react";
 import { KanjiActions, KanjiInitialStateType } from "./Kanji.types";
 import { KanjiQuestionReducers } from "./Kanji.reducers";
-
-const initialState: KanjiInitialStateType = {
-  question: {
-    selected: null,
-    data: [],
-  },
-};
+import { initialState } from "./Kanji.data";
 
 const KanjiContext = createContext<{
   state: KanjiInitialStateType;
@@ -25,8 +19,11 @@ const mainReducer = (
   question: KanjiQuestionReducers(question, action),
 });
 
-const KanjiProvider = (props: { children: React.ReactNode }) => {
-  const [state, dispatch] = useReducer(mainReducer, initialState);
+const KanjiProvider = (props: {
+  children: React.ReactNode;
+  state: KanjiInitialStateType;
+}) => {
+  const [state, dispatch] = useReducer(mainReducer, props.state);
 
   return (
     <KanjiContext.Provider value={{ state, dispatch }}>

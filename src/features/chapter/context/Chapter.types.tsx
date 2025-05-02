@@ -30,6 +30,7 @@ export interface ChapterKanji {
     items: {
       id: string;
       name: string;
+      description: string;
     }[];
   };
 }

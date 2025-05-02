@@ -6,7 +6,8 @@ import {
   KanjiActionEnum,
   KanjiContext,
 } from "../../context";
-import { KanjiMasterEntities } from "@/api/kanji/entities";
+import { KanjiMasterEntities } from "@/core/models/database";
+import { Button } from "@/components/ui/button";
 
 export const AnswerVocabulary = () => {
   const { state, dispatch } = React.useContext(KanjiContext);
@@ -51,29 +52,28 @@ export const AnswerVocabulary = () => {
           : "grid-cols-1"
       )}
     >
-      {state.question.data[selectedIndex].options.map((option, optionIndex) => (
-        <button
-          key={optionIndex}
-          className={clsx(
-            "grid grid-cols-1 place-content-center place-items-center",
-            "py-[0.875rem]",
-            "w-full",
-            "text-[1rem] text-[#222222] font-semibold",
-            state.question.data[selectedIndex].answers.includes(option.id) &&
+      {state.question.data[selectedIndex].options.map(
+        (option: KanjiMasterEntities, optionIndex: number) => (
+          <Button
+            key={optionIndex}
+            variant={
+              state.question.data[selectedIndex].answers.includes(option.id) &&
               option.id !== state.question.data[selectedIndex].prompt.id
-              ? "bg-[red]"
-              : "bg-[white]",
-            "border border-[#222222]",
-            "rounded-[0.5rem]",
-            "capitalize"
-          )}
-          onClick={() =>
-            handleClickAnswerButton(option, state.question.data[selectedIndex])
-          }
-        >
-          {option.kunyomi}
-        </button>
-      ))}
+                ? "destructive"
+                : "default"
+            }
+            className={clsx("w-full")}
+            onClick={() =>
+              handleClickAnswerButton(
+                option,
+                state.question.data[selectedIndex]
+              )
+            }
+          >
+            {option.read}
+          </Button>
+        )
+      )}
     </div>
   );
 };

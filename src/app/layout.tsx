@@ -15,7 +15,7 @@ const defaultUrl = process.env.VERCEL_URL
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
   title: "JLPT",
-  description: "Generated for Bas Learn Japanese",
+  description: "GO JLPT",
 };
 
 export const viewport: Viewport = {

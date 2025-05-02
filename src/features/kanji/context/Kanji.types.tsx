@@ -1,4 +1,4 @@
-import { GetKanjiQuestionListResponseDTO } from "@/api/kanji/dto/question_list.get";
+import { KanjiMasterEntities } from "@/core/models/database";
 
 type ActionMap<M extends { [index: string]: any }> = {
   [Key in keyof M]: M[Key] extends undefined
@@ -22,7 +22,21 @@ export interface KanjiQuestion {
   data: QuestionWithCorrect[];
 }
 
-export type QuestionWithCorrect = GetKanjiQuestionListResponseDTO & {
+export type QuestionWithCorrect = {
+  id: string;
+  prompt: {
+    id: string;
+    kanji_id: string;
+    kanji: string;
+    example: string;
+    read: string;
+    romanji: string;
+    "id-ID": string;
+    "en-US": string;
+    text: string;
+  };
+  options: KanjiMasterEntities[];
+} & {
   answers: string[];
   correct: boolean;
 };
