@@ -27,29 +27,30 @@ export const useGetVocabularyCategoryList = () => {
       };
       return fetchGetVocabularyCategoryList(payload);
     },
-    enabled: !!level,
+    // enabled: !!level,
+    enabled: false,
   });
 
-  React.useEffect(() => {
-    if (query.data && !query.isFetching) {
-      const data = query.data;
-      dispatch({
-        type: ChapterActionEnum.SetVocabularyData,
-        payload: {
-          ...state.vocabulary,
-          category: {
-            ...state.vocabulary.category,
-            items:
-              data.data?.map((item) => {
-                return {
-                  id: item.id,
-                  name: item["id-ID"],
-                };
-              }) ?? [],
-          },
-        },
-      });
-    }
-  }, [query.data, query.isFetching]);
+  // React.useEffect(() => {
+  //   if (query.data && !query.isFetching) {
+  //     const data = query.data;
+  //     dispatch({
+  //       type: ChapterActionEnum.SetVocabularyData,
+  //       payload: {
+  //         ...state.vocabulary,
+  //         category: {
+  //           ...state.vocabulary.category,
+  //           items:
+  //             data.data?.map((item) => {
+  //               return {
+  //                 id: item.id,
+  //                 name: item["id-ID"],
+  //               };
+  //             }) ?? [],
+  //         },
+  //       },
+  //     });
+  //   }
+  // }, [query.data, query.isFetching]);
   return query;
 };

@@ -12,9 +12,10 @@ import { Accordion } from "@/core/components/accordion";
 export const VocabularyChapter = () => {
   const dictionaries = getDictionaries();
   const { state } = React.useContext(ChapterContext);
-  useGetVocabularyCategoryList();
+  // useGetVocabularyCategoryList();
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
+  console.log(state,'ini state')
   return (
     <div
       className={clsx(
