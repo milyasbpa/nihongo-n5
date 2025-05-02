@@ -12,6 +12,11 @@ export const QuestionKanji = () => {
 
   const questionText =
     state.question.data[state.question.selected].prompt.example;
+
+  const questionMeaning = `(${
+    state.question.data[state.question.selected].prompt["en-US"]
+  })`;
+
   const handleClickQuestion = (text: string) => {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "ja-JP";
@@ -49,11 +54,9 @@ export const QuestionKanji = () => {
             {questionText}
           </button>
           <p
-            className={clsx(
-              "text-[black] text-[1rem] font-normal text-center"
-            )}
+            className={clsx("text-[black] text-[1rem] font-normal text-center")}
           >
-            {state.question.data[state.question.selected].prompt["en-US"]}
+            {questionMeaning}
           </p>
         </div>
       </div>
