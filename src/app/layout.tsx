@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Fredoka } from "next/font/google";
 import "./globals.css";
 import { ReactQueryProvider } from "@/core/utils/react_query";
+import { ThemeProvider } from "@/core/contexts/ThemeProvider";
 
 const fredoka = Fredoka({
   variable: "--font-fredoka",
@@ -59,7 +60,14 @@ export default function RootLayout({
       </head>
 
       <body className={`${fredoka.variable} antialiased`}>
-        <ReactQueryProvider>{children}</ReactQueryProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ReactQueryProvider>{children}</ReactQueryProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

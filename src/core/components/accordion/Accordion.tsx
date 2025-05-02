@@ -35,7 +35,7 @@ export const Accordion = ({ header = "", children = "" }: AccordionProps) => {
         </span>
         <SVGIcon
           name={isOpen ? "ChevronUp" : "ChevronDown"}
-          className={clsx("w-[1.5rem] h-[1.5rem]", "text-[#232323]")}
+          className={clsx("w-[1.5rem] h-[1.5rem]")}
         />
       </button>
       <motion.div

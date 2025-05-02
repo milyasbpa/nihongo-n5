@@ -43,7 +43,7 @@ export const ProgressKanji = () => {
       <Link href={AppCollectionURL.public.chapter(params.toString())}>
         <SVGIcon
           name="X"
-          className={clsx("w-[1.5rem] h-[1.5rem]", "text-[black]")}
+          className={clsx("w-[1.5rem] h-[1.5rem]", "text-primary")}
         />
       </Link>
 
@@ -51,7 +51,7 @@ export const ProgressKanji = () => {
       <button onClick={handleClickSetting}>
         <SVGIcon
           name="Settings2"
-          className={clsx("w-[1.5rem] h-[1.5rem]", "text-[black]")}
+          className={clsx("w-[1.5rem] h-[1.5rem]", "text-primary")}
         />
       </button>
     </div>

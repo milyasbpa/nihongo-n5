@@ -24,7 +24,7 @@ export const KanjiChapter = () => {
     >
       <Accordion
         header={
-          <h2 className={clsx("text-[1.5rem] text-[#2222224D] font-medium")}>
+          <h2 className={clsx("text-[1.5rem] text-primary font-medium")}>
             {dictionaries.kanji.title}
           </h2>
         }
@@ -57,7 +57,7 @@ export const KanjiChapter = () => {
                   )}
                 >
                   <KanjiItem kanji={item.name} />
-                  <span className={clsx("text-[black]")}>
+                  <span className={clsx("text-primary text-[1rem] font-semibold")}>
                     {item.description}
                   </span>
                 </div>

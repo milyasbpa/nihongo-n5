@@ -40,7 +40,7 @@ export const KanjiItem = ({ kanji = "" }: KanjiItemProps) => {
       path.style.animationDelay = `${index * 0.5}s`;
       path.style.stroke = "#000";
       path.style.fill = "none";
-      path.style.strokeWidth = "2";
+      path.style.strokeWidth = "10";
     });
 
     // Total duration = delay per stroke + stroke duration
@@ -63,7 +63,7 @@ export const KanjiItem = ({ kanji = "" }: KanjiItemProps) => {
         "grid grid-cols-1 place-content-center place-items-center",
         "w-[4rem] h-[4rem]",
         "rounded-[50%]",
-        "bg-fuchsia-300"
+        "bg-primary"
       )}
     >
       <div style={{ width: "1.5rem", height: "1.5rem", margin: "0 auto" }}>

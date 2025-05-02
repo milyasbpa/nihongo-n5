@@ -24,7 +24,7 @@ export const VocabularyChapter = () => {
     >
       <Accordion
         header={
-          <h2 className={clsx("text-[1.5rem] text-[#2222224D] font-medium")}>
+          <h2 className={clsx("text-[1.5rem] text-primary font-medium")}>
             {dictionaries.vocabulary.title}
           </h2>
         }
@@ -61,12 +61,12 @@ export const VocabularyChapter = () => {
                       "w-full",
                       "aspect-square",
                       "rounded-[50%]",
-                      "bg-amber-300"
+                      "bg-primary"
                     )}
                   />
                   <p
                     className={clsx(
-                      "text-pastel-card-primary-text text-[0.875rem] text-center"
+                      "text-primary text-[0.875rem] text-center"
                     )}
                   >
                     {category.name}

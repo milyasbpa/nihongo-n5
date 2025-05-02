@@ -36,7 +36,7 @@ export const QuestionKanji = () => {
         )}
       >
         <h1
-          className={clsx("text-[black] text-[1.25rem] font-bold text-center")}
+          className={clsx("text-primary text-[1.25rem] font-bold text-center")}
         >
           {state.question.data[state.question.selected].prompt.text}
         </h1>
@@ -48,13 +48,13 @@ export const QuestionKanji = () => {
           )}
         >
           <button
-            className={clsx("text-[black] text-[4rem] font-bold text-center")}
+            className={clsx("text-primary text-[4rem] font-bold text-center")}
             onClick={() => handleClickQuestion(questionText)}
           >
             {questionText}
           </button>
           <p
-            className={clsx("text-[black] text-[1rem] font-normal text-center")}
+            className={clsx("text-primary text-[1rem] font-normal text-center")}
           >
             {questionMeaning}
           </p>

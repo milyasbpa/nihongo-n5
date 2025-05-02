@@ -12,7 +12,7 @@ export const ListLevel = () => {
   useGetLevelList();
   return (
     <div className={clsx("w-full")}>
-      <h1 className={clsx("text-[1.5rem] text-orange-800 font-medium")}>
+      <h1 className={clsx("text-[1.5rem] text-primary font-medium")}>
         {"Select your Level"}
       </h1>
       <div
