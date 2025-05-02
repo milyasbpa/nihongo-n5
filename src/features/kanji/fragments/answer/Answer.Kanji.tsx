@@ -60,7 +60,7 @@ export const AnswerKanji = () => {
               state.question.data[selectedIndex].answers.includes(option.id) &&
               option.id !== state.question.data[selectedIndex].prompt.id
                 ? "destructive"
-                : "default"
+                : "outline"
             }
             className={clsx("w-full")}
             onClick={() => {
