@@ -20,6 +20,17 @@ export interface KanjiInitialStateType {
 export interface KanjiQuestion {
   selected: null | number;
   data: QuestionWithCorrect[];
+  settings: {
+    is_open: boolean;
+    question: {
+      selected: { id: string; name: string }[];
+      options: { id: string; name: string }[];
+    };
+    answer: {
+      selected: { id: string; name: string } | null;
+      options: { id: string; name: string }[];
+    };
+  };
 }
 
 export type QuestionWithCorrect = {

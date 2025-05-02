@@ -7,7 +7,7 @@ import { AppCollectionURL } from "@/core/utils/router/constants/app";
 import { useSearchParams } from "next/navigation";
 import { KanjiContext } from "../../context";
 
-export const FinishVocabulary = () => {
+export const FinishKanji = () => {
   const dictionaries = getDictionaries();
   const { state } = React.useContext(KanjiContext);
   const searchParams = useSearchParams();

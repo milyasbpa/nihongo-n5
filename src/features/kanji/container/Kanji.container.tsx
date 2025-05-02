@@ -1,11 +1,12 @@
 "use client";
 import * as React from "react";
 import clsx from "clsx";
-import { ProgressVocabulary } from "../fragments/progress";
-import { QuestionVocabulary } from "../fragments/question";
-import { AnswerVocabulary } from "../fragments/answer";
+import { ProgressKanji } from "../fragments/progress";
+import { QuestionKanji } from "../fragments/question";
+import { AnswerKanji } from "../fragments/answer";
 import { KanjiContext } from "../context";
-import { FinishVocabulary } from "../fragments/finish";
+import { FinishKanji } from "../fragments/finish";
+import { SettingsKanji } from "../fragments/settings";
 
 export const KanjiContainer = () => {
   const { state } = React.useContext(KanjiContext);
@@ -19,14 +20,15 @@ export const KanjiContainer = () => {
       >
         {state.question.selected !== state.question.data.length ? (
           <>
-            <ProgressVocabulary />
-            <QuestionVocabulary />
-            <AnswerVocabulary />
+            <ProgressKanji />
+            <QuestionKanji />
+            <AnswerKanji />
           </>
         ) : (
-          <FinishVocabulary />
+          <FinishKanji />
         )}
       </div>
+      <SettingsKanji />
     </React.Suspense>
   );
 };

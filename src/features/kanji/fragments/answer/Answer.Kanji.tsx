@@ -9,7 +9,7 @@ import {
 import { KanjiMasterEntities } from "@/core/models/database";
 import { Button } from "@/components/ui/button";
 
-export const AnswerVocabulary = () => {
+export const AnswerKanji = () => {
   const { state, dispatch } = React.useContext(KanjiContext);
   const selectedIndex = state.question.selected;
   if (selectedIndex === null) {

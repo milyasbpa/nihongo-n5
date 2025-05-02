@@ -2,14 +2,14 @@
 import * as React from "react";
 import clsx from "clsx";
 import SVGIcon from "@/core/icons";
-import { KanjiContext } from "../../context";
+import { KanjiActionEnum, KanjiContext } from "../../context";
 import Link from "next/link";
 import { AppCollectionURL } from "@/core/utils/router/constants/app";
 import { useSearchParams } from "next/navigation";
 import { Progress } from "@/components/ui/progress";
 
-export const ProgressVocabulary = () => {
-  const { state } = React.useContext(KanjiContext);
+export const ProgressKanji = () => {
+  const { state, dispatch } = React.useContext(KanjiContext);
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
 
@@ -19,11 +19,24 @@ export const ProgressVocabulary = () => {
 
   const progress =
     ((state.question.selected ?? 0) / state.question.data.length) * 100;
-  console.log(progress, "ini progress");
+
+  const handleClickSetting = () => {
+    dispatch({
+      type: KanjiActionEnum.SetQuestionData,
+      payload: {
+        ...state.question,
+        settings: {
+          ...state.question.settings,
+          is_open: true,
+        },
+      },
+    });
+  };
+
   return (
     <div
       className={clsx(
-        "grid grid-cols-[auto_1fr] items-center content-center justify-start justify-items-start gap-[0.5rem]",
+        "grid grid-cols-[auto_1fr_auto] items-center content-center justify-start justify-items-start gap-[0.5rem]",
         "w-full"
       )}
     >
@@ -35,6 +48,12 @@ export const ProgressVocabulary = () => {
       </Link>
 
       <Progress value={progress} />
+      <button onClick={handleClickSetting}>
+        <SVGIcon
+          name="Settings2"
+          className={clsx("w-[1.5rem] h-[1.5rem]", "text-[black]")}
+        />
+      </button>
     </div>
   );
 };

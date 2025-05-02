@@ -1,1 +1,1 @@
-export * from "./Finish.vocabulary";
+export * from "./Finish.kanji";

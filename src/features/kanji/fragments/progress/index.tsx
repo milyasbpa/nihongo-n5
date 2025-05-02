@@ -1,1 +1,1 @@
-export * from "./Progress.vocabulary";
+export * from "./Progress.kanji";
