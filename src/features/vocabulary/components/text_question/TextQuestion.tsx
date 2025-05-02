@@ -12,7 +12,7 @@ export const TextQuestion = ({ text = "", className }: TextQuestionProps) => {
       className={clsx(
         "grid grid-flow-col place-content-center place-items-center gap-[1rem]",
         "w-full",
-        "text-[2rem] text-[black] font-semibold",
+        "text-[2rem] text-primary font-semibold",
         className
       )}
     >

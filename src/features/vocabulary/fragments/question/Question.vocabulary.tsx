@@ -16,8 +16,6 @@ export const QuestionVocabulary = () => {
     (item) => item.name
   );
 
-  console.log(questionSettingList, "ini apa");
-
   return (
     <div
       className={clsx(
@@ -32,7 +30,7 @@ export const QuestionVocabulary = () => {
         )}
       >
         <h1
-          className={clsx("text-[black] text-[1.25rem] font-bold text-center")}
+          className={clsx("text-primary text-[1.25rem] font-bold text-center")}
         >
           {state.question.data[state.question.selected].prompt.text}
         </h1>
@@ -75,12 +73,6 @@ export const QuestionVocabulary = () => {
           />
         )}
       </div>
-
-      {/* <AudioQuestion
-        voice_url={
-          state.question.data[state.question.selected].prompt.voice_url
-        }
-      /> */}
     </div>
   );
 };

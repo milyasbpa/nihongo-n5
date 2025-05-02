@@ -6,8 +6,12 @@ import { getDictionaries } from "../../i18n";
 import Link from "next/link";
 import { AppCollectionURL } from "@/core/utils/router/constants/app";
 import { useSearchParams } from "next/navigation";
-import { Accordion } from "@/core/components/accordion";
 import { KanjiItem } from "../../components/kanji_item";
+import {
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export const KanjiChapter = () => {
   const dictionaries = getDictionaries();
@@ -16,19 +20,13 @@ export const KanjiChapter = () => {
   const searchParams = useSearchParams();
   const level = searchParams.get("level");
   return (
-    <div
-      className={clsx(
-        "grid grid-cols-1 place-content-start place-items-start gap-[1rem]",
-        "w-full"
-      )}
-    >
-      <Accordion
-        header={
-          <h2 className={clsx("text-[1.5rem] text-primary font-medium")}>
-            {dictionaries.kanji.title}
-          </h2>
-        }
-      >
+    <AccordionItem value="kanji">
+      <AccordionTrigger>
+        <h2 className={clsx("text-[1.5rem] text-primary font-medium")}>
+          {dictionaries.kanji.title}
+        </h2>
+      </AccordionTrigger>
+      <AccordionContent>
         <div
           className={clsx(
             "grid grid-cols-1 place-items-start place-content-start gap-[20px]",
@@ -57,7 +55,9 @@ export const KanjiChapter = () => {
                   )}
                 >
                   <KanjiItem kanji={item.name} />
-                  <span className={clsx("text-primary text-[1rem] font-semibold")}>
+                  <span
+                    className={clsx("text-primary text-[1rem] font-semibold")}
+                  >
                     {item.description}
                   </span>
                 </div>
@@ -65,7 +65,7 @@ export const KanjiChapter = () => {
             );
           })}
         </div>
-      </Accordion>
-    </div>
+      </AccordionContent>
+    </AccordionItem>
   );
 };

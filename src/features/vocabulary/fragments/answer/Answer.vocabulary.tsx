@@ -7,6 +7,7 @@ import {
   VocabularyContext,
 } from "../../context";
 import { VocabularyWordsEntities } from "@/api/vocabulary/entities";
+import { Button } from "@/components/ui/button";
 
 export const AnswerVocabulary = () => {
   const { state, dispatch } = React.useContext(VocabularyContext);
@@ -62,21 +63,15 @@ export const AnswerVocabulary = () => {
             ? option["hiragana_katakana"]
             : option["id-ID"];
         return (
-          <button
+          <Button
             key={optionIndex}
-            className={clsx(
-              "grid grid-cols-1 place-content-center place-items-center",
-              "py-[0.875rem]",
-              "w-full",
-              "text-[1rem] text-[#222222] font-semibold",
+            className={clsx("w-full")}
+            variant={
               state.question.data[selectedIndex].answers.includes(option.id) &&
-                option.id !== state.question.data[selectedIndex].prompt.id
-                ? "bg-[red]"
-                : "bg-[white]",
-              "border border-[#222222]",
-              "rounded-[0.5rem]",
-              "capitalize"
-            )}
+              option.id !== state.question.data[selectedIndex].prompt.id
+                ? "destructive"
+                : "outline"
+            }
             onClick={() => {
               const utterance = new SpeechSynthesisUtterance(optionText);
               utterance.lang = "ja-JP"; // Bisa diganti ke 'en-US', 'ja-JP', dll
@@ -88,7 +83,7 @@ export const AnswerVocabulary = () => {
             }}
           >
             {optionText}
-          </button>
+          </Button>
         );
       })}
     </div>

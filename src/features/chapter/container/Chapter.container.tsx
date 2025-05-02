@@ -5,6 +5,12 @@ import SVGIcon from "@/core/icons";
 import Link from "next/link";
 import { AppCollectionURL } from "@/core/utils/router/constants/app";
 import { KanjiChapter } from "../fragments/kanji";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export const ChapterContainer = () => {
   return (
@@ -24,8 +30,11 @@ export const ChapterContainer = () => {
         <SVGIcon name="ChevronLeft" />
         {"Back"}
       </Link>
-      <KanjiChapter />
-      <VocabularyChapter />
+
+      <Accordion type="single" collapsible className="w-full">
+        <KanjiChapter />
+        <VocabularyChapter />
+      </Accordion>
     </div>
   );
 };
