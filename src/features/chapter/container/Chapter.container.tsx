@@ -5,12 +5,7 @@ import SVGIcon from "@/core/icons";
 import Link from "next/link";
 import { AppCollectionURL } from "@/core/utils/router/constants/app";
 import { KanjiChapter } from "../fragments/kanji";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion } from "@/components/ui/accordion";
 
 export const ChapterContainer = () => {
   return (
