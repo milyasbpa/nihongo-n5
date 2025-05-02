@@ -24,12 +24,16 @@ export const getKanjiList = async (data: GetKanjiList) => {
   });
   const strokeCollection = parsed.data.map((item) => item.kanji_id);
   const result = [...new Set(strokeCollection)].map((item, index) => {
+    const dataLength = parsed.data.filter(
+      (kanjiItem) => kanjiItem.kanji_id === item
+    ).length;
     return {
       id: item,
-      name: parsed.data[index * 4 + 1]["kanji"],
+      name: parsed.data[index * dataLength + 1]["kanji"],
       description: parsed.data
         .filter(
-          (dataItem) => dataItem.kanji === parsed.data[index * 4 + 1]["kanji"]
+          (dataItem) =>
+            dataItem.kanji === parsed.data[index * dataLength + 1]["kanji"]
         )
         .map((dataItem) => dataItem.example)
         .join(", "),

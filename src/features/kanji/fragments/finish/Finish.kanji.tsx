@@ -6,6 +6,7 @@ import Link from "next/link";
 import { AppCollectionURL } from "@/core/utils/router/constants/app";
 import { useSearchParams } from "next/navigation";
 import { KanjiContext } from "../../context";
+import { Button } from "@/components/ui/button";
 
 export const FinishKanji = () => {
   const dictionaries = getDictionaries();
@@ -39,9 +40,14 @@ export const FinishKanji = () => {
       <p>{"Stats"}</p>
       <p>{`${totalCorrectAnswerCount}/${totalQuestionNumber}`}</p>
       <p>{"List that you need to take note"}</p>
-      <p>{wrongAnswer.map((item) => item.prompt.kanji).join(", ")}</p>
-      <Link href={AppCollectionURL.public.chapter(params.toString())}>
-        {dictionaries.finish.cta.back.children}
+      <p>{wrongAnswer.map((item) => item.prompt.example).join(", ")}</p>
+      <Link
+        href={AppCollectionURL.public.chapter(params.toString())}
+        className={clsx("w-full")}
+      >
+        <Button className={clsx("w-full")}>
+          {dictionaries.finish.cta.back.children.toUpperCase()}
+        </Button>
       </Link>
     </div>
   );

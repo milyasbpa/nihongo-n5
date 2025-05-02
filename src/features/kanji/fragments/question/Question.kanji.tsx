@@ -13,6 +13,8 @@ export const QuestionKanji = () => {
   const questionText =
     state.question.data[state.question.selected].prompt.example;
 
+  const questionSoundText = state.question.data[state.question.selected].prompt.read;
+
   const questionMeaning = `(${
     state.question.data[state.question.selected].prompt["en-US"]
   })`;
@@ -49,7 +51,7 @@ export const QuestionKanji = () => {
         >
           <button
             className={clsx("text-primary text-[4rem] font-bold text-center")}
-            onClick={() => handleClickQuestion(questionText)}
+            onClick={() => handleClickQuestion(questionSoundText)}
           >
             {questionText}
           </button>

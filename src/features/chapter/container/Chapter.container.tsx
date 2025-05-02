@@ -31,7 +31,12 @@ export const ChapterContainer = () => {
         {"Back"}
       </Link>
 
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion
+        type="single"
+        collapsible
+        defaultValue="kanji"
+        className="w-full"
+      >
         <KanjiChapter />
         <VocabularyChapter />
       </Accordion>
